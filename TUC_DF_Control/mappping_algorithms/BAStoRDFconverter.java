@@ -69,20 +69,6 @@ public class BAStoRDFconverter {
 		Iterable<CSVRecord> recordList = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(targetReader).getRecords();
 		parseResources(recordList);
 
-		// Trying Reasoner engine (cannot do both - saref and brick - at the same time
-		// and add the entire ontology to the graph)
-		/*
-		 * Model brick = RDFDataMgr.loadModel("D:/datos-flaand/Brick.ttl"); Model saref
-		 * = RDFDataMgr.loadModel("D:/datos-flaand/Saref.ttl"); Reasoner reasoner =
-		 * ReasonerRegistry.getRDFSSimpleReasoner(); Reasoner boundReasonerBrick =
-		 * reasoner.bindSchema(brick); Reasoner boundReasonerSaref =
-		 * reasoner.bindSchema(saref); InfModel infModelBrick =
-		 * ModelFactory.createInfModel(boundReasonerBrick, rdfModel); InfModel
-		 * infModelSaref = ModelFactory.createInfModel(boundReasonerSaref,
-		 * infModelBrick);
-		 * 
-		 * return (infModelBrick); //return (infModelSaref);
-		 */
 
 		return (rdfModel);
 	}
