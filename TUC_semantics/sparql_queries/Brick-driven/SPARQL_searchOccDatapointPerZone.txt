@@ -5,8 +5,8 @@ PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
 
 SELECT  DISTINCT ?ZoneID ?point WHERE {{
 
-?TsetMax a brick:Max_Temperature_Setpoint_Limit ;
-ref:hasExternalReference/ref:hasTimeseriesId ?point .
+?occ a brick:Occupancy_Sensor;
+ref:hasExternalReference/ref:hasTimeseriesId ?point.
 
 ?zone a brick:Zone ; brick:hasPart ?space ;
 ref:hasExternalReference ?zoneRef.
@@ -14,7 +14,8 @@ ref:hasExternalReference ?zoneRef.
 ?zoneRef a ref:IFCReference ;
 ref:ifcName ?ZoneID .
 
-{{?zone brick:isRegulatedBy/brick:hasPoint | brick:isFedBy/brick:hasPoint ?TsetMax.}} UNION
-{{?space brick:isLocationOf/brick:hasPoint ?TsetMax.}}
+{{?zone brick:isRegulatedBy/brick:hasPoint | brick:isFedBy/brick:hasPoint ?occ .}} 
+UNION
+{{?space brick:isLocationOf/brick:hasPoint ?occ .}} 
 
 }}
