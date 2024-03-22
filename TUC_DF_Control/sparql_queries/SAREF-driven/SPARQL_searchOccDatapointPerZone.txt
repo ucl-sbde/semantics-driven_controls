@@ -1,0 +1,27 @@
+PREFIX  rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX  brick: <https://brickschema.org/schema/Brick#> 
+PREFIX  om:    <http://openmetrics.eu/openmetrics#> 
+PREFIX  saref: <https://saref.etsi.org/core#>  
+PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
+PREFIX  s4bldg: <https://saref.etsi.org/saref4bldg#>
+
+SELECT  DISTINCT ?ZoneID ?point WHERE {{
+
+    ?sensingFunction a saref:SensingFunction; 
+    saref:hasSensorType ?property;
+    saref:hasCommand ?sensingPoint . 
+
+    ?sensingPoint a saref:GetSensingDataCommand;
+    ref:hasExternalReference/ref:hasTimeseriesId ?point.
+
+    ?property a saref:Occupancy. 
+
+    ?zone a brick:Zone ; brick:hasPart ?space ;
+    ref:hasExternalReference ?zoneRef.
+
+    ?zoneRef a ref:IFCReference ;
+    ref:ifcName ?ZoneID .
+
+    {{?space s4bldg:contains/saref:hasFunction ?sensingFunction .}}
+
+}}
