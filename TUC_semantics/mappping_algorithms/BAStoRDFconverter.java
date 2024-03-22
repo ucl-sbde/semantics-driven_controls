@@ -630,7 +630,6 @@ public class BAStoRDFconverter {
 				}
 			}
 		}
-		// print the model in Turtle format
 	   // rdfModel.write(System.out, "TURTLE");
 	}
 }
