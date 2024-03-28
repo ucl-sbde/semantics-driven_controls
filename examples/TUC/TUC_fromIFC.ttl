@@ -1,0 +1,675 @@
+@prefix schema: <http://schema.org#> .
+@prefix ref:   <https://brickschema.org/schema/Brick/ref#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg#> .
+@prefix saref: <https://saref.etsi.org/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix s4ener: <https://saref.etsi.org/saref4ener#> .
+@prefix om:    <http://openmetrics.eu/openmetrics#> .
+
+om:ZoneRef_62910  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0_Cl1t7onEZwpCblUnHZTe" ;
+        ref:ifcName      "A3:453259" .
+
+om:ZoneRef_63135  a      ref:IFCReference ;
+        ref:ifcGlobalID  "20ATIiG4rFzOwjysAbYjoJ" ;
+        ref:ifcName      "I1:453262" .
+
+om:Space_2409  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "1raecK5JTC_PHIQqeF3yM2" ;
+                                    ref:ifcName      "WC_I4"
+                                  ] .
+
+om:Space_2217  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4L" ;
+                                    ref:ifcName      "WC_I3"
+                                  ] .
+
+om:Element_37087  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_167 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3LY" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436293"
+                                  ] .
+
+om:ZoneRef_62384  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0J5GGcHXH0CP8hbTp3jIv0" ;
+        ref:ifcName      "B2:453251" .
+
+om:ZoneRef_62534  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0J5GGcHXH0CP8hbTp3jIv6" ;
+        ref:ifcName      "B4:453253" .
+
+om:BuildingStorey_179
+        a                         brick:Storey ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "0a0u_yaVr91RamT04O09sz" ;
+                                    ref:ifcName      ""
+                                  ] .
+
+om:Space_4766  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0047_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oV" ;
+                                    ref:ifcName      "ROOM_A1"
+                                  ] .
+
+om:Space_4382  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2ra" ;
+                                    ref:ifcName      "SHAFT_0_1"
+                                  ] .
+
+om:ZoneRef_62229  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0J5GGcHXH0CP8hbTp3jIv2" ;
+        ref:ifcName      "B6:453249" .
+
+om:RC04N0050_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_6037 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3Lf" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436302"
+                                  ] .
+
+om:RC04N0053_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_7283 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3GQ" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436541"
+                                  ] .
+
+om:RC04N0056_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_3511 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3HY" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436549"
+                                  ] .
+
+om:ZoneRef_62684  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0_Cl1t7onEZwpCblUnHZTh" ;
+        ref:ifcName      "A6:453256" .
+
+om:Space_4035  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qP" ;
+                                    ref:ifcName      "WC_B4"
+                                  ] .
+
+om:Space_5483  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oR" ;
+                                    ref:ifcName      "SHAFT_1_0"
+                                  ] .
+
+om:Element_21724  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_161 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "2wUZvbW4v3wOwtjicQlQAx" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:431955"
+                                  ] .
+
+om:Space_598  a                   brick:Space ;
+        brick:isLocationOf        om:RC04N0041_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4f" ;
+                                    ref:ifcName      "ROOM_I1"
+                                  ] .
+
+om:ZoneRef_62124  a      ref:IFCReference ;
+        ref:ifcGlobalID  "06B2afrsv0uBHvTl5DaaCm" ;
+        ref:ifcName      "Default:134083" .
+
+om:Space_4953  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0048_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oU" ;
+                                    ref:ifcName      "ROOM_A2"
+                                  ] .
+
+om:Space_2967  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qV" ;
+                                    ref:ifcName      "Shaft_2_0"
+                                  ] .
+
+om:Space_6037  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0050_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oO" ;
+                                    ref:ifcName      "ROOM_A4"
+                                  ] .
+
+om:BuildingStorey_161
+        a                         brick:Storey ;
+        brick:hasPart             om:Space_598 , om:Space_1307 , om:Space_347 , om:Space_4201 , om:Space_1126 , om:Space_2217 , om:Space_1498 , om:Space_2040 , om:Space_1664 , om:Space_2409 , om:Space_1857 , om:Space_960 , om:Space_4382 , om:Space_783 ;
+        brick:isLocationOf        om:Element_22334 , om:Element_21724 , om:Element_60664 , om:Element_22160 , om:Element_22073 , om:Element_22247 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "0a0u_yaVr91RamT04O09sz" ;
+                                    ref:ifcName      ""
+                                  ] .
+
+om:Space_4201  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2rc" ;
+                                    ref:ifcName      "CORRIDOR_I"
+                                  ] .
+
+om:Space_1498  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0045_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4c" ;
+                                    ref:ifcName      "ROOM_I5"
+                                  ] .
+
+om:RC04N0051_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_5676 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3Lt" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436304"
+                                  ] .
+
+om:RC04N0054_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_7468 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3Hc" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436545"
+                                  ] .
+
+om:Zone_62310  a                  brick:Zone ;
+        brick:hasPart             om:Space_7283 ;
+        ref:hasExternalReference  om:ZoneRef_62310 .
+
+om:RC04N0057_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_3154 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3HW" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436551"
+                                  ] .
+
+om:Element_36739  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_167 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3Ld" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436288"
+                                  ] .
+
+om:Zone_63211  a                  brick:Zone ;
+        brick:hasPart             om:Space_960 , om:Space_783 ;
+        ref:hasExternalReference  om:ZoneRef_63211 .
+
+om:Space_3692  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0055_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qR" ;
+                                    ref:ifcName      "ROOM_B3"
+                                  ] .
+
+om:Element_22073  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_161 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3a1tR809rAReA0vyWW$Oeq" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:433790"
+                                  ] .
+
+om:Zone_63361  a                  brick:Zone ;
+        brick:hasPart             om:Space_2409 , om:Space_1857 ;
+        ref:hasExternalReference  om:ZoneRef_63361 .
+
+om:Zone_63511  a                  brick:Zone ;
+        brick:hasPart             om:Space_1126 , om:Space_347 ;
+        ref:hasExternalReference  om:ZoneRef_63511 .
+
+om:Space_1664  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4O" ;
+                                    ref:ifcName      "WC_I5"
+                                  ] .
+
+om:Building_142  a                brick:Building ;
+        brick:hasPart             om:BuildingStorey_179 , om:BuildingStorey_173 , om:BuildingStorey_167 , om:BuildingStorey_161 , om:BuildingStorey_157 ;
+        ref:hasExternalReference  [ a                ref:IFCReference ;
+                                    ref:ifcGlobalID  "0a0u_yaVr91RamT04O09sz" ;
+                                    ref:ifcName      ""
+                                  ] .
+
+om:Element_36826  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_167 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3Lb" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436290"
+                                  ] .
+
+om:RC04N0046_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_347 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "1$hwS2P_zBQfIJrrfYGWV0" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:434029"
+                                  ] .
+
+om:RC04N0043_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_2040 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "1$hwS2P_zBQfIJrrfYGZWG" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:434365"
+                                  ] .
+
+om:Element_22160  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_161 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3a1tR809rAReA0vyWW$Ohc" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:433836"
+                                  ] .
+
+om:RC04N0049_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_6220 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3Lh" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436300"
+                                  ] .
+
+om:ZoneRef_62761  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0_Cl1t7onEZwpCblUnHZTg" ;
+        ref:ifcName      "A1:453257" .
+
+om:Space_5844  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oP" ;
+                                    ref:ifcName      "WC_A5"
+                                  ] .
+
+om:Element_60664  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_161 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3K6dsk8tfBjOr7FxM4prjU" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:448902"
+                                  ] .
+
+om:Zone_62910  a                  brick:Zone ;
+        brick:hasPart             om:Space_6399 , om:Space_6220 ;
+        ref:hasExternalReference  om:ZoneRef_62910 .
+
+om:Zone_63135  a                  brick:Zone ;
+        brick:hasPart             om:Space_598 ;
+        ref:hasExternalReference  om:ZoneRef_63135 .
+
+om:Space_2786  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qG" ;
+                                    ref:ifcName      "WC_B6"
+                                  ] .
+
+om:Space_7283  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0053_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pl" ;
+                                    ref:ifcName      "ROOM_B1"
+                                  ] .
+
+om:RC04N0052_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_4573 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3Ll" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436296"
+                                  ] .
+
+om:RC04N0058_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_7094 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3GO" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436543"
+                                  ] .
+
+om:RC04N0055_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_3692 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3Ha" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436547"
+                                  ] .
+
+om:Element_36913  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_167 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3La" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436291"
+                                  ] .
+
+om:Element_48003  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_173 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3GS" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436539"
+                                  ] .
+
+om:Zone_62384  a                  brick:Zone ;
+        brick:hasPart             om:Space_7468 , om:Space_2618 ;
+        ref:hasExternalReference  om:ZoneRef_62384 .
+
+om:Zone_62534  a                  brick:Zone ;
+        brick:hasPart             om:Space_4035 , om:Space_3511 ;
+        ref:hasExternalReference  om:ZoneRef_62534 .
+
+om:ZoneRef_63286  a      ref:IFCReference ;
+        ref:ifcGlobalID  "20ATIiG4rFzOwjysAbYjoD" ;
+        ref:ifcName      "I3:453264" .
+
+om:Space_6903  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pZ" ;
+                                    ref:ifcName      "SHAFT_1_1"
+                                  ] .
+
+om:Space_3511  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0056_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qS" ;
+                                    ref:ifcName      "ROOM_B4"
+                                  ] .
+
+om:ZoneRef_63436  a      ref:IFCReference ;
+        ref:ifcGlobalID  "20ATIiG4rFzOwjysAbYjoF" ;
+        ref:ifcName      "I5:453266" .
+
+om:Element_22247  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_161 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3a1tR809rAReA0vyWW$Og1" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:433867"
+                                  ] .
+
+om:Element_60751  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_167 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "0gNak8c7f0H8qYRww5gMYs" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:450625"
+                                  ] .
+
+om:Zone_62229  a                  brick:Zone ;
+        brick:hasPart             om:Space_7094 , om:Space_2786 ;
+        ref:hasExternalReference  om:ZoneRef_62229 .
+
+om:Space_2618  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qH" ;
+                                    ref:ifcName      "WC_B2"
+                                  ] .
+
+om:Space_783  a                   brick:Space ;
+        brick:isLocationOf        om:RC04N0042_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4h" ;
+                                    ref:ifcName      "ROOM_I2"
+                                  ] .
+
+om:BuildingStorey_167
+        a                         brick:Storey ;
+        brick:hasPart             om:Space_5676 , om:Space_6903 , om:Space_5300 , om:Space_5132 , om:Space_5844 , om:Space_4766 , om:Space_5483 , om:Space_6399 , om:Space_6037 , om:Space_6567 , om:Space_4573 , om:Space_6220 , om:Space_6735 , om:Space_4953 ;
+        brick:isLocationOf        om:Element_36826 , om:Element_37087 , om:Element_36739 , om:Element_37000 , om:Element_60751 , om:Element_36913 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "0a0u_yaVr91RamT04O09sz" ;
+                                    ref:ifcName      ""
+                                  ] .
+
+om:Zone_62684  a                  brick:Zone ;
+        brick:hasPart             om:Space_5300 , om:Space_4573 ;
+        ref:hasExternalReference  om:ZoneRef_62684 .
+
+om:ZoneRef_62835  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0_Cl1t7onEZwpCblUnHZTf" ;
+        ref:ifcName      "A2:453258" .
+
+om:ZoneRef_63060  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0_Cl1t7onEZwpCblUnHZTk" ;
+        ref:ifcName      "A5:453261" .
+
+om:Space_5300  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oS" ;
+                                    ref:ifcName      "WC_A6"
+                                  ] .
+
+om:RC04N0041_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_598 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "1$hwS2P_zBQfIJrrfYGWU4" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:433961"
+                                  ] .
+
+om:Space_5676  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0051_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oQ" ;
+                                    ref:ifcName      "ROOM_A5"
+                                  ] .
+
+om:RC04N0044_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_1857 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "1$hwS2P_zBQfIJrrfYGZba" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:434633"
+                                  ] .
+
+om:Element_22334  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_161 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3a1tR809rAReA0vyWW$Ogb" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:433903"
+                                  ] .
+
+om:RC04N0047_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_4766 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3LX" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436294"
+                                  ] .
+
+om:Element_60838  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_173 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "0gNak8c7f0H8qYRww5gMXs" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:450689"
+                                  ] .
+
+om:Element_48090  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_173 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3GR" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436540"
+                                  ] .
+
+om:Zone_62124  a                  brick:Zone ;
+        brick:hasPart             om:Space_7652 , om:Space_4382 , om:Space_5483 , om:Space_6735 , om:Space_7818 , om:Space_2967 , om:Space_6903 , om:Space_1307 , om:Space_4201 ;
+        ref:hasExternalReference  om:ZoneRef_62124 .
+
+om:Space_7094  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0058_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pW" ;
+                                    ref:ifcName      "ROOM_B6"
+                                  ] .
+
+om:ZoneRef_62459  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0J5GGcHXH0CP8hbTp3jIv7" ;
+        ref:ifcName      "B5:453252" .
+
+om:ZoneRef_62985  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0_Cl1t7onEZwpCblUnHZTl" ;
+        ref:ifcName      "A4:453260" .
+
+om:ZoneRef_62609  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0J5GGcHXH0CP8hbTp3jIv5" ;
+        ref:ifcName      "B3:453254" .
+
+om:Space_1307  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4X" ;
+                                    ref:ifcName      "SHAFT_0_0"
+                                  ] .
+
+om:Space_6735  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pa" ;
+                                    ref:ifcName      "CORRIDOR_A"
+                                  ] .
+
+om:Space_3869  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qQ" ;
+                                    ref:ifcName      "WC_B3"
+                                  ] .
+
+om:Space_5132  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oT" ;
+                                    ref:ifcName      "WC_A2"
+                                  ] .
+
+om:RC04N0042_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_783 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "1$hwS2P_zBQfIJrrfYGZYb" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:434184"
+                                  ] .
+
+om:RC04N0045_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_1498 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "1$hwS2P_zBQfIJrrfYGZgg" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:434695"
+                                  ] .
+
+om:RC04N0048_Controller
+        a                         s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasLocation         om:Space_4953 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3Lj" ;
+                                    ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:436298"
+                                  ] .
+
+om:BuildingStorey_157
+        a                         brick:Storey ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "0a0u_yaVr91RamT04O09sz" ;
+                                    ref:ifcName      ""
+                                  ] .
+
+om:Space_7652  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pq" ;
+                                    ref:ifcName      "CORRIDOR_B"
+                                  ] .
+
+om:Space_347  a                   brick:Space ;
+        brick:isLocationOf        om:RC04N0046_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4t" ;
+                                    ref:ifcName      "ROOM_I6"
+                                  ] .
+
+om:Space_4573  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0052_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oG" ;
+                                    ref:ifcName      "ROOM_A6"
+                                  ] .
+
+om:Space_1857  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0044_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4S" ;
+                                    ref:ifcName      "ROOM_I4"
+                                  ] .
+
+om:Space_6567  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pb" ;
+                                    ref:ifcName      "WC_A4"
+                                  ] .
+
+om:Space_2040  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0043_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4G" ;
+                                    ref:ifcName      "ROOM_I3"
+                                  ] .
+
+om:Space_3154  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0057_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qU" ;
+                                    ref:ifcName      "ROOM_B5"
+                                  ] .
+
+om:Space_7468  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0054_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pk" ;
+                                    ref:ifcName      "ROOM_B2"
+                                  ] .
+
+om:Site_243  a                    brick:Site ;
+        brick:hasPart             om:Building_142 ;
+        ref:hasExternalReference  [ a                ref:IFCReference ;
+                                    ref:ifcGlobalID  "0a0u_yaVr91RamT04O09s_" ;
+                                    ref:ifcName      "Surface:440560"
+                                  ] .
+
+om:Element_47742  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_173 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3GG" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436535"
+                                  ] .
+
+om:Zone_62761  a                  brick:Zone ;
+        brick:hasPart             om:Space_4766 ;
+        ref:hasExternalReference  om:ZoneRef_62761 .
+
+om:Space_960  a                   brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4j" ;
+                                    ref:ifcName      "WC_I2"
+                                  ] .
+
+om:Space_1126  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4l" ;
+                                    ref:ifcName      "WC_I6"
+                                  ] .
+
+om:Space_6220  a                  brick:Space ;
+        brick:isLocationOf        om:RC04N0049_Controller ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pd" ;
+                                    ref:ifcName      "ROOM_A3"
+                                  ] .
+
+om:BuildingStorey_173
+        a                         brick:Storey ;
+        brick:hasPart             om:Space_4035 , om:Space_3154 , om:Space_7094 , om:Space_3692 , om:Space_7283 , om:Space_3869 , om:Space_7818 , om:Space_2618 , om:Space_2786 , om:Space_3320 , om:Space_2967 , om:Space_7468 , om:Space_7652 , om:Space_3511 ;
+        brick:isLocationOf        om:Element_47916 , om:Element_48003 , om:Element_47829 , om:Element_60838 , om:Element_47742 , om:Element_48090 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "0a0u_yaVr91RamT04O09sz" ;
+                                    ref:ifcName      ""
+                                  ] .
+
+om:Space_7818  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pp" ;
+                                    ref:ifcName      "Shaft_2_1"
+                                  ] .
+
+om:Element_47829  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_173 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3GU" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436537"
+                                  ] .
+
+om:Zone_63286  a                  brick:Zone ;
+        brick:hasPart             om:Space_2217 , om:Space_2040 ;
+        ref:hasExternalReference  om:ZoneRef_63286 .
+
+om:Space_3320  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qT" ;
+                                    ref:ifcName      "WC_B5"
+                                  ] .
+
+om:Zone_63436  a                  brick:Zone ;
+        brick:hasPart             om:Space_1664 , om:Space_1498 ;
+        ref:hasExternalReference  om:ZoneRef_63436 .
+
+om:Space_6399  a                  brick:Space ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pc" ;
+                                    ref:ifcName      "WC_A3"
+                                  ] .
+
+om:ZoneRef_62310  a      ref:IFCReference ;
+        ref:ifcGlobalID  "0J5GGcHXH0CP8hbTp3jIv1" ;
+        ref:ifcName      "B1:453250" .
+
+om:Zone_62835  a                  brick:Zone ;
+        brick:hasPart             om:Space_5132 , om:Space_4953 ;
+        ref:hasExternalReference  om:ZoneRef_62835 .
+
+om:Zone_63060  a                  brick:Zone ;
+        brick:hasPart             om:Space_5844 , om:Space_5676 ;
+        ref:hasExternalReference  om:ZoneRef_63060 .
+
+om:ZoneRef_63211  a      ref:IFCReference ;
+        ref:ifcGlobalID  "20ATIiG4rFzOwjysAbYjoI" ;
+        ref:ifcName      "I2:453263" .
+
+om:Element_47916  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_173 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3GT" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436538"
+                                  ] .
+
+om:Element_37000  a               saref:HVAC , brick:Terminal_Unit ;
+        brick:hasLocation         om:BuildingStorey_167 ;
+        ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam3LZ" ;
+                                    ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:436292"
+                                  ] .
+
+om:Zone_62459  a                  brick:Zone ;
+        brick:hasPart             om:Space_3320 , om:Space_3154 ;
+        ref:hasExternalReference  om:ZoneRef_62459 .
+
+om:Zone_62985  a                  brick:Zone ;
+        brick:hasPart             om:Space_6567 , om:Space_6037 ;
+        ref:hasExternalReference  om:ZoneRef_62985 .
+
+om:Zone_62609  a                  brick:Zone ;
+        brick:hasPart             om:Space_3869 , om:Space_3692 ;
+        ref:hasExternalReference  om:ZoneRef_62609 .
+
+om:ZoneRef_63361  a      ref:IFCReference ;
+        ref:ifcGlobalID  "20ATIiG4rFzOwjysAbYjoC" ;
+        ref:ifcName      "I4:453265" .
+
+om:ZoneRef_63511  a      ref:IFCReference ;
+        ref:ifcGlobalID  "20ATIiG4rFzOwjysAbYjoE" ;
+        ref:ifcName      "I6:453267" .
