@@ -1,0 +1,199 @@
+device_identifier,data_point_name,data_point_identifier
+RC04N0041,kind label cmd point mode writeble,TUC.245.76.R7
+RC04N0041,kind point cmd writeble send label,TUC.245.76.R18
+RC04N0041,his kind keepalive writeble cmd label point onoff,TUC.245.76.R6
+RC04N0041,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R0
+RC04N0041,cmd his writeble label kind fan point keepalive,TUC.245.76.R9
+RC04N0041,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R8
+RC04N0041,cmd lockout,TUC.245.76.R19
+RC04N0041,unit-symbol writeble sp unit point max kind label,TUC.245.76.R15
+RC04N0041,point label kind his sensor occ keepalive,TUC.245.76.R4
+RC04N0041,param delay,TUC.245.76.R17
+RC04N0041,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R14
+RC04N0042,kind label cmd point mode writeble,TUC.245.76.R107
+RC04N0042,cmd lockout,TUC.245.76.R119
+RC04N0042,param delay,TUC.245.76.R117
+RC04N0042,kind point cmd writeble send label,TUC.245.76.R118
+RC04N0042,his kind keepalive writeble cmd label point onoff,TUC.245.76.R106
+RC04N0042,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R100
+RC04N0042,unit-symbol writeble sp unit point max kind label,TUC.245.76.R115
+RC04N0042,point label kind his sensor occ keepalive,TUC.245.76.R104
+RC04N0042,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R114
+RC04N0042,cmd his writeble label kind fan point keepalive,TUC.245.76.R109
+RC04N0042,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R108
+RC04N0043,his kind keepalive writeble cmd label point onoff,TUC.245.76.R86
+RC04N0043,cmd his writeble label kind fan point keepalive,TUC.245.76.R89
+RC04N0043,point label kind his sensor occ keepalive,TUC.245.76.R84
+RC04N0043,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R80
+RC04N0043,cmd lockout,TUC.245.76.R99
+RC04N0043,unit-symbol writeble sp unit point max kind label,TUC.245.76.R95
+RC04N0043,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R88
+RC04N0043,param delay,TUC.245.76.R97
+RC04N0043,kind label cmd point mode writeble,TUC.245.76.R87
+RC04N0043,kind point cmd writeble send label,TUC.245.76.R98
+RC04N0043,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R94
+RC04N0044,kind point cmd writeble send label,TUC.245.76.R78
+RC04N0044,his kind keepalive writeble cmd label point onoff,TUC.245.76.R66
+RC04N0044,point label kind his sensor occ keepalive,TUC.245.76.R64
+RC04N0044,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R60
+RC04N0044,cmd lockout,TUC.245.76.R79
+RC04N0044,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R74
+RC04N0044,cmd his writeble label kind fan point keepalive,TUC.245.76.R69
+RC04N0044,unit-symbol writeble sp unit point max kind label,TUC.245.76.R75
+RC04N0044,param delay,TUC.245.76.R77
+RC04N0044,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R68
+RC04N0044,kind label cmd point mode writeble,TUC.245.76.R67
+RC04N0045,kind point cmd writeble send label,TUC.245.76.R58
+RC04N0045,his kind keepalive writeble cmd label point onoff,TUC.245.76.R46
+RC04N0045,cmd his writeble label kind fan point keepalive,TUC.245.76.R49
+RC04N0045,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R40
+RC04N0045,unit-symbol writeble sp unit point max kind label,TUC.245.76.R55
+RC04N0045,cmd lockout,TUC.245.76.R59
+RC04N0045,kind label cmd point mode writeble,TUC.245.76.R47
+RC04N0045,param delay,TUC.245.76.R57
+RC04N0045,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R48
+RC04N0045,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R54
+RC04N0045,point label kind his sensor occ keepalive,TUC.245.76.R44
+RC04N0046,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R34
+RC04N0046,unit-symbol writeble sp unit point max kind label,TUC.245.76.R35
+RC04N0046,kind point cmd writeble send label,TUC.245.76.R38
+RC04N0046,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R28
+RC04N0046,his kind keepalive writeble cmd label point onoff,TUC.245.76.R26
+RC04N0046,cmd his writeble label kind fan point keepalive,TUC.245.76.R29
+RC04N0046,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R20
+RC04N0046,param delay,TUC.245.76.R37
+RC04N0046,cmd lockout,TUC.245.76.R39
+RC04N0046,kind label cmd point mode writeble,TUC.245.76.R27
+RC04N0046,point label kind his sensor occ keepalive,TUC.245.76.R24
+RC04N0047,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R188
+RC04N0047,kind label cmd point mode writeble,TUC.245.76.R187
+RC04N0047,unit-symbol writeble sp unit point max kind label,TUC.245.76.R195
+RC04N0047,param delay,TUC.245.76.R197
+RC04N0047,cmd his writeble label kind fan point keepalive,TUC.245.76.R189
+RC04N0047,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R180
+RC04N0047,kind point cmd writeble send label,TUC.245.76.R198
+RC04N0047,cmd lockout,TUC.245.76.R199
+RC04N0047,point label kind his sensor occ keepalive,TUC.245.76.R184
+RC04N0047,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R194
+RC04N0047,his kind keepalive writeble cmd label point onoff,TUC.245.76.R186
+RC04N0048,cmd lockout,TUC.245.76.R299
+RC04N0048,kind point cmd writeble send label,TUC.245.76.R298
+RC04N0048,cmd his writeble label kind fan point keepalive,TUC.245.76.R289
+RC04N0048,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R294
+RC04N0048,his kind keepalive writeble cmd label point onoff,TUC.245.76.R286
+RC04N0048,kind label cmd point mode writeble,TUC.245.76.R287
+RC04N0048,param delay,TUC.245.76.R297
+RC04N0048,unit-symbol writeble sp unit point max kind label,TUC.245.76.R295
+RC04N0048,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R280
+RC04N0048,point label kind his sensor occ keepalive,TUC.245.76.R284
+RC04N0048,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R288
+RC04N0049,param delay,TUC.245.76.R277
+RC04N0049,kind label cmd point mode writeble,TUC.245.76.R267
+RC04N0049,kind point cmd writeble send label,TUC.245.76.R278
+RC04N0049,point label kind his sensor occ keepalive,TUC.245.76.R264
+RC04N0049,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R268
+RC04N0049,cmd lockout,TUC.245.76.R279
+RC04N0049,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R274
+RC04N0049,his kind keepalive writeble cmd label point onoff,TUC.245.76.R266
+RC04N0049,unit-symbol writeble sp unit point max kind label,TUC.245.76.R275
+RC04N0049,cmd his writeble label kind fan point keepalive,TUC.245.76.R269
+RC04N0049,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R260
+RC04N0050,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R248
+RC04N0050,his kind keepalive writeble cmd label point onoff,TUC.245.76.R246
+RC04N0050,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R240
+RC04N0050,cmd his writeble label kind fan point keepalive,TUC.245.76.R249
+RC04N0050,point label kind his sensor occ keepalive,TUC.245.76.R244
+RC04N0050,kind label cmd point mode writeble,TUC.245.76.R247
+RC04N0050,unit-symbol writeble sp unit point max kind label,TUC.245.76.R255
+RC04N0050,param delay,TUC.245.76.R257
+RC04N0050,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R254
+RC04N0050,cmd lockout,TUC.245.76.R259
+RC04N0050,kind point cmd writeble send label,TUC.245.76.R258
+RC04N0051,param delay,TUC.245.76.R237
+RC04N0051,his kind keepalive writeble cmd label point onoff,TUC.245.76.R226
+RC04N0051,cmd lockout,TUC.245.76.R239
+RC04N0051,kind label cmd point mode writeble,TUC.245.76.R227
+RC04N0051,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R220
+RC04N0051,unit-symbol writeble sp unit point max kind label,TUC.245.76.R235
+RC04N0051,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R228
+RC04N0051,cmd his writeble label kind fan point keepalive,TUC.245.76.R229
+RC04N0051,point label kind his sensor occ keepalive,TUC.245.76.R224
+RC04N0051,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R234
+RC04N0051,kind point cmd writeble send label,TUC.245.76.R238
+RC04N0052,kind label cmd point mode writeble,TUC.245.76.R207
+RC04N0052,his kind keepalive writeble cmd label point onoff,TUC.245.76.R206
+RC04N0052,point label kind his sensor occ keepalive,TUC.245.76.R204
+RC04N0052,cmd his writeble label kind fan point keepalive,TUC.245.76.R209
+RC04N0052,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R200
+RC04N0052,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R208
+RC04N0052,unit-symbol writeble sp unit point max kind label,TUC.245.76.R215
+RC04N0052,param delay,TUC.245.76.R217
+RC04N0052,cmd lockout,TUC.245.76.R219
+RC04N0052,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R214
+RC04N0052,kind point cmd writeble send label,TUC.245.76.R218
+RC04N0053,param delay,TUC.245.76.R377
+RC04N0053,his kind keepalive writeble cmd label point onoff,TUC.245.76.R366
+RC04N0053,cmd lockout,TUC.245.76.R379
+RC04N0053,point label kind his sensor occ keepalive,TUC.245.76.R364
+RC04N0053,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R360
+RC04N0053,unit-symbol writeble sp unit point max kind label,TUC.245.76.R375
+RC04N0053,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R368
+RC04N0053,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R374
+RC04N0053,kind label cmd point mode writeble,TUC.245.76.R367
+RC04N0053,cmd his writeble label kind fan point keepalive,TUC.245.76.R369
+RC04N0053,kind point cmd writeble send label,TUC.245.76.R378
+RC04N0054,kind point cmd writeble send label,TUC.245.76.R478
+RC04N0054,cmd lockout,TUC.245.76.R479
+RC04N0054,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R474
+RC04N0054,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R468
+RC04N0054,point label kind his sensor occ keepalive,TUC.245.76.R464
+RC04N0054,his kind keepalive writeble cmd label point onoff,TUC.245.76.R466
+RC04N0054,kind label cmd point mode writeble,TUC.245.76.R467
+RC04N0054,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R460
+RC04N0054,cmd his writeble label kind fan point keepalive,TUC.245.76.R469
+RC04N0054,unit-symbol writeble sp unit point max kind label,TUC.245.76.R475
+RC04N0054,param delay,TUC.245.76.R477
+RC04N0055,point label kind his sensor occ keepalive,TUC.245.76.R444
+RC04N0055,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R448
+RC04N0055,cmd lockout,TUC.245.76.R459
+RC04N0055,param delay,TUC.245.76.R457
+RC04N0055,his kind keepalive writeble cmd label point onoff,TUC.245.76.R446
+RC04N0055,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R440
+RC04N0055,unit-symbol writeble sp unit point max kind label,TUC.245.76.R455
+RC04N0055,kind label cmd point mode writeble,TUC.245.76.R447
+RC04N0055,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R454
+RC04N0055,kind point cmd writeble send label,TUC.245.76.R458
+RC04N0055,cmd his writeble label kind fan point keepalive,TUC.245.76.R449
+RC04N0056,param delay,TUC.245.76.R437
+RC04N0056,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R428
+RC04N0056,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R434
+RC04N0056,point label kind his sensor occ keepalive,TUC.245.76.R424
+RC04N0056,cmd his writeble label kind fan point keepalive,TUC.245.76.R429
+RC04N0056,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R420
+RC04N0056,kind point cmd writeble send label,TUC.245.76.R438
+RC04N0056,cmd lockout,TUC.245.76.R439
+RC04N0056,unit-symbol writeble sp unit point max kind label,TUC.245.76.R435
+RC04N0056,his kind keepalive writeble cmd label point onoff,TUC.245.76.R426
+RC04N0056,kind label cmd point mode writeble,TUC.245.76.R427
+RC04N0057,cmd lockout,TUC.245.76.R419
+RC04N0057,cmd his writeble label kind fan point keepalive,TUC.245.76.R409
+RC04N0057,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R408
+RC04N0057,param delay,TUC.245.76.R417
+RC04N0057,kind label cmd point mode writeble,TUC.245.76.R407
+RC04N0057,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R414
+RC04N0057,unit-symbol writeble sp unit point max kind label,TUC.245.76.R415
+RC04N0057,his kind keepalive writeble cmd label point onoff,TUC.245.76.R406
+RC04N0057,point label kind his sensor occ keepalive,TUC.245.76.R404
+RC04N0057,kind point cmd writeble send label,TUC.245.76.R418
+RC04N0057,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R400
+RC04N0058,keepalive label kind writeble unit-symbol unit sp point his,TUC.245.76.R388
+RC04N0058,param delay,TUC.245.76.R397
+RC04N0058,cmd his writeble label kind fan point keepalive,TUC.245.76.R389
+RC04N0058,unit-symbol writeble sp unit point max kind label,TUC.245.76.R395
+RC04N0058,his kind keepalive writeble cmd label point onoff,TUC.245.76.R386
+RC04N0058,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R380
+RC04N0058,kind label cmd point mode writeble,TUC.245.76.R387
+RC04N0058,min point kind unit label writeble sp unit-sympbol,TUC.245.76.R394
+RC04N0058,kind point cmd writeble send label,TUC.245.76.R398
+RC04N0058,point label kind his sensor occ keepalive,TUC.245.76.R384
+RC04N0058,cmd lockout,TUC.245.76.R399
