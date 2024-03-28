@@ -45,7 +45,7 @@ public class BAStoRDFconverter {
 	private Model rdfModel;
 
 	public static void main(String[] args) throws IOException, ParseException {
-		Reader targetReader = new FileReader("TUC_Points_final.csv");
+		Reader targetReader = new FileReader("YourCSVFile.csv");
 		BAStoRDFconverter converter = new BAStoRDFconverter();
 		Model model = converter.converter(targetReader);
 		model.write(System.out, "ttl");
@@ -68,6 +68,8 @@ public class BAStoRDFconverter {
 
 		Iterable<CSVRecord> recordList = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(targetReader).getRecords();
 		parseResources(recordList);
+
+		// data_point_name, data_point_identifier, device_identifier
 
 
 		return (rdfModel);
