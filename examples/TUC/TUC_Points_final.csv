@@ -1,5 +1,5 @@
 device_identifier,data_point_name,data_point_identifier,device_name
-RC04N00,kind label cmd point mode writeble,TUC.245.76.R7,vav
+RC04N00,kind label cmd point mode writeble,TUC.245.76.R7,thermostat
 RC04N0041,kind point cmd writeble send label,TUC.245.76.R18,thermostat
 RC04N0041,his kind keepalive writeble cmd label point onoff,TUC.245.76.R6,thermostat
 RC04N0041,his keepalive min label sensor kind point unit threshold factor temp unit-symbol max,TUC.245.76.R0,thermostat
