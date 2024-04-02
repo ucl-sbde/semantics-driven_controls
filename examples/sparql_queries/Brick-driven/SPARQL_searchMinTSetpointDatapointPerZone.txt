@@ -3,7 +3,7 @@ PREFIX  brick: <https://brickschema.org/schema/Brick#>
 PREFIX  om:    <http://openmetrics.eu/openmetrics#> 
 PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
 
-SELECT  DISTINCT ?ZoneID ?point WHERE {{
+SELECT  DISTINCT ?ZoneID ?point WHERE {
 
     ?TsetMin a brick:Min_Temperature_Setpoint_Limit ;
     ref:hasExternalReference/ref:hasTimeseriesId ?point .
@@ -14,7 +14,6 @@ SELECT  DISTINCT ?ZoneID ?point WHERE {{
     ?zoneRef a ref:IFCReference ;
     ref:ifcName ?ZoneID .
 
-    {{?zone brick:isRegulatedBy/brick:hasPoint | brick:isFedBy/brick:hasPoint ?TsetMin.}} UNION
-    {{?space brick:isLocationOf/brick:hasPoint ?TsetMin.}}
+    ?space brick:isLocationOf/brick:hasPoint ?TsetMin.
 
-}}
+}

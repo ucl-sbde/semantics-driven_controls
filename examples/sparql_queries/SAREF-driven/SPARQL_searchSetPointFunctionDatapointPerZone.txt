@@ -4,14 +4,15 @@ PREFIX  om:    <http://openmetrics.eu/openmetrics#>
 PREFIX  saref: <https://saref.etsi.org/core#>  
 PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
 PREFIX  s4bldg: <https://saref.etsi.org/saref4bldg#>
+PREFIX quantitykind: <"http://qudt.org/vocab/quantitykind/>
 
 SELECT  DISTINCT ?ZoneID ?point WHERE {{
 
-    ?actuatingFunction a saref:LevelControlFunction ; 
-    saref:hasCommand ?command . 
-
-    ?command a  brick:Zone_Air_Temperature_Setpoint ;
+    ?Tset a  a saref:Actuator;
+    saref:controls ?property  ;
     ref:hasExternalReference/ref:hasTimeseriesId ?point .
+
+    ?property a quantitykind:Temperature, saref:Property . 
 
     ?zone a brick:Zone ; brick:hasPart  ?space ;
     ref:hasExternalReference ?zoneRef.
@@ -19,6 +20,6 @@ SELECT  DISTINCT ?ZoneID ?point WHERE {{
     ?zoneRef a ref:IFCReference ;
     ref:ifcName ?ZoneID .
 
-    {{?space s4bldg:contains/saref:hasFunction ?actuatingFunction.}}
+    ?space s4bldg:contains/saref:consistOf ?Tset .
 
-}}
+}

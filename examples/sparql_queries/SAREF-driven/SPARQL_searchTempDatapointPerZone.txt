@@ -4,24 +4,22 @@ PREFIX  om:    <http://openmetrics.eu/openmetrics#>
 PREFIX  saref: <https://saref.etsi.org/core#>  
 PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
 PREFIX  s4bldg: <https://saref.etsi.org/saref4bldg#>
+PREFIX quantitykind: <"http://qudt.org/vocab/quantitykind/>
 
 SELECT  DISTINCT ?ZoneID ?point WHERE {{
 
-    ?sensingFunction a saref:SensingFunction; 
-    saref:hasSensorType ?property;
-    saref:hasCommand ?sensingPoint . 
+    ?Tsensingpoint a saref:Sensor;
+    saref:observes ?property ;
+    ref:hasExternalReference/ref:hasTimeseriesId ?point .
 
-    ?sensingPoint a saref:GetSensingDataCommand;
-    ref:hasExternalReference/ref:hasTimeseriesId ?point.
-
-    ?property a saref:Temperature. 
-
+    ?property a  quantitykind:Temperature, saref:Property . 
+ 
     ?zone a brick:Zone ; brick:hasPart ?space ;
     ref:hasExternalReference ?zoneRef.
 
     ?zoneRef a ref:IFCReference ;
     ref:ifcName ?ZoneID .
 
-    {{?space s4bldg:contains/saref:hasFunction ?sensingFunction .}}
+    ?space s4bldg:contains/saref:consistOf ?Tsensingpoint .
 
 }}

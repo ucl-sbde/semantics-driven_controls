@@ -3,7 +3,7 @@ PREFIX  brick: <https://brickschema.org/schema/Brick#>
 PREFIX  om:    <http://openmetrics.eu/openmetrics#> 
 PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
 
-SELECT  DISTINCT ?ZoneID ?point WHERE {{
+SELECT  DISTINCT ?ZoneID ?point WHERE {
 
 ?setpoint a  brick:Zone_Air_Temperature_Setpoint ;
 ref:hasExternalReference/ref:hasTimeseriesId ?point .
@@ -14,8 +14,6 @@ ref:hasExternalReference ?zoneRef.
 ?zoneRef a ref:IFCReference ;
 ref:ifcName ?ZoneID .
 
-{{?zone brick:isRegulatedBy/brick:hasPoint | brick:isFedBy/brick:hasPoint ?command .}} 
-UNION
-{{?space brick:isLocationOf/brick:hasPoint ?setpoint .}}  
+?space brick:isLocationOf/brick:hasPoint ?setpoint .
 
-}}
+}
