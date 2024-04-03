@@ -1,1933 +1,910 @@
-@prefix schema: <http://schema.org#> .
-@prefix ref:   <https://brickschema.org/schema/Brick/ref#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix s4bldg: <https://saref.etsi.org/saref4bldg#> .
-@prefix saref: <https://saref.etsi.org/core#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix brick: <https://brickschema.org/schema/Brick#> .
-@prefix om:    <http://openmetrics.eu/openmetrics#> .
-@prefix s4ener: <https://saref.etsi.org/saref4ener#> .
-
-om:RC04N0045_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R48" ] ;
-        saref:isCommandOf         om:RC04N0045_SetPointFunction .
-
-om:RC04N0043_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0043_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:_EnergyProperty  a  saref:Energy .
-
-om:RC04N0057_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R409" ] .
-
-om:RC04N0045_Controller
-        a                    s4bldg:UnitaryControlElement , brick:Thermostat ;
-        brick:hasPoint       om:RC04N0045_SetpointMax , om:RC04N0045_ZoneSetPoint , om:RC04N0045_OccSensingPoint , om:RC04N0045_OnCommand , om:RC04N0045_SetpointMin , om:RC04N0045_Mode_Command , om:RC04N0045_Run_Request_Command , om:RC04N0045_TempSensingPoint , om:RC04N0045_Delay_Parameter , om:RC04N0045_OffCommand , om:RC04N0045_Speed_Setpoint_Command , om:RC04N0045_Lockout_Command ;
-        saref:hasFunction    om:RC04N0045_StartStopFunction , om:RC04N0045_OccSensingFunction , om:RC04N0045_SetPointFunction , om:RC04N0045_OnOffFunction , om:RC04N0045_TempSensingFunction ;
-        s4ener:serialNumber  "RC04N0045" .
-
-om:RC04N0046_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R37" ] .
-
-om:RC04N0055_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0055_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R446" ] ;
-        saref:isCommandOf         om:RC04N0055_OnOffFunction .
-
-om:RC04N0043_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0043_Run_Request_Command .
-
-om:RC04N0044_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0044_ZoneSetPoint .
-
-om:RC04N0046_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R26" ] ;
-        saref:isCommandOf         om:RC04N0046_OnOffFunction .
-
-om:RC04N0051_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0051_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0046_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R28" ] ;
-        saref:isCommandOf         om:RC04N0046_SetPointFunction .
-
-om:RC04N0042_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R115" ] .
-
-om:RC04N0056_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R420" ] ;
-        saref:isCommandOf         om:RC04N0056_TempSensingFunction .
-
-om:RC04N0050_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R259" ] .
-
-om:RC04N0055_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0055_ZoneSetPoint .
-
-om:RC04N0058_Controller
-        a                    s4bldg:UnitaryControlElement , brick:Thermostat ;
-        brick:hasPoint       om:RC04N0058_OffCommand , om:RC04N0058_Delay_Parameter , om:RC04N0058_Speed_Setpoint_Command , om:RC04N0058_TempSensingPoint , om:RC04N0058_SetpointMax , om:RC04N0058_SetpointMin , om:RC04N0058_OccSensingPoint , om:RC04N0058_Run_Request_Command , om:RC04N0058_OnCommand , om:RC04N0058_ZoneSetPoint , om:RC04N0058_Mode_Command , om:RC04N0058_Lockout_Command ;
-        saref:hasFunction    om:RC04N0058_TempSensingFunction , om:RC04N0058_OnOffFunction , om:RC04N0058_OccSensingFunction , om:RC04N0058_StartStopFunction , om:RC04N0058_SetPointFunction ;
-        s4ener:serialNumber  "RC04N0058" .
-
-om:RC04N0042_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0042_Run_Request_Command .
-
-om:RC04N0057_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0057_OffCommand , om:RC04N0057_OnCommand .
-
-om:RC04N0042_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R106" ] ;
-        saref:isCommandOf         om:RC04N0042_OnOffFunction .
-
-om:RC04N0057_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0057_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0047_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R188" ] ;
-        saref:isCommandOf         om:RC04N0047_SetPointFunction .
-
-om:RC04N0053_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0053_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0042_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R104" ] ;
-        saref:isCommandOf         om:RC04N0042_OccSensingFunction .
-
-om:RC04N0043_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R99" ] .
-
-om:RC04N0052_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R215" ] .
-
-om:RC04N0054_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0054_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0046_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R20" ] ;
-        saref:isCommandOf         om:RC04N0046_TempSensingFunction .
-
-om:RC04N0050_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R249" ] .
-
-om:RC04N0041_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0041_Run_Request_Command .
-
-om:RC04N0048_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R288" ] ;
-        saref:isCommandOf         om:RC04N0048_SetPointFunction .
-
-om:RC04N0057_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R417" ] .
-
-om:RC04N0049_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R278" ] ;
-        saref:isCommandOf         om:RC04N0049_StartStopFunction .
-
-om:RC04N0045_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R58" ] ;
-        saref:isCommandOf         om:RC04N0045_StartStopFunction .
-
-om:RC04N0043_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R89" ] .
-
-om:RC04N0048_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0048_OffCommand , om:RC04N0048_OnCommand .
-
-om:RC04N0047_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R195" ] .
-
-om:RC04N0049_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R268" ] ;
-        saref:isCommandOf         om:RC04N0049_SetPointFunction .
-
-om:RC04N0055_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0055_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R448" ] ;
-        saref:isCommandOf         om:RC04N0055_SetPointFunction .
-
-om:RC04N0041_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R18" ] ;
-        saref:isCommandOf         om:RC04N0041_StartStopFunction .
-
-om:RC04N0058_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0058_Run_Request_Command .
-
-om:RC04N0053_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R360" ] ;
-        saref:isCommandOf         om:RC04N0053_TempSensingFunction .
-
-om:RC04N0046_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0046_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0045_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R49" ] .
-
-om:RC04N0052_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0052_ZoneSetPoint .
-
-om:RC04N0057_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R415" ] .
-
-om:RC04N0056_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R428" ] ;
-        saref:isCommandOf         om:RC04N0056_SetPointFunction .
-
-om:RC04N0054_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R479" ] .
-
-om:RC04N0048_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R286" ] ;
-        saref:isCommandOf         om:RC04N0048_OnOffFunction .
-
-om:RC04N0044_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R74" ] .
-
-om:RC04N0041_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R6" ] ;
-        saref:isCommandOf         om:RC04N0041_OnOffFunction .
-
-om:RC04N0043_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R80" ] ;
-        saref:isCommandOf         om:RC04N0043_TempSensingFunction .
-
-om:RC04N0042_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0042_ZoneSetPoint .
-
-om:RC04N0058_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0058_OffCommand , om:RC04N0058_OnCommand .
-
-om:RC04N0055_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0055_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R458" ] ;
-        saref:isCommandOf         om:RC04N0055_StartStopFunction .
-
-om:RC04N0054_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R464" ] ;
-        saref:isCommandOf         om:RC04N0054_OccSensingFunction .
-
-om:RC04N0047_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R199" ] .
-
-om:RC04N0057_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R408" ] ;
-        saref:isCommandOf         om:RC04N0057_SetPointFunction .
-
-om:RC04N0051_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R238" ] ;
-        saref:isCommandOf         om:RC04N0051_StartStopFunction .
-
-om:RC04N0053_Controller
-        a                    s4bldg:UnitaryControlElement , brick:Thermostat ;
-        brick:hasPoint       om:RC04N0053_SetpointMin , om:RC04N0053_OffCommand , om:RC04N0053_OnCommand , om:RC04N0053_Lockout_Command , om:RC04N0053_Run_Request_Command , om:RC04N0053_Delay_Parameter , om:RC04N0053_Speed_Setpoint_Command , om:RC04N0053_ZoneSetPoint , om:RC04N0053_Mode_Command , om:RC04N0053_OccSensingPoint , om:RC04N0053_SetpointMax , om:RC04N0053_TempSensingPoint ;
-        saref:hasFunction    om:RC04N0053_OccSensingFunction , om:RC04N0053_StartStopFunction , om:RC04N0053_TempSensingFunction , om:RC04N0053_OnOffFunction , om:RC04N0053_SetPointFunction ;
-        s4ener:serialNumber  "RC04N0053" .
-
-om:RC04N0054_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R474" ] .
-
-om:RC04N0056_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0056_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0044_Controller
-        a                    s4bldg:UnitaryControlElement , brick:Thermostat ;
-        brick:hasPoint       om:RC04N0044_ZoneSetPoint , om:RC04N0044_Lockout_Command , om:RC04N0044_OnCommand , om:RC04N0044_SetpointMax , om:RC04N0044_Delay_Parameter , om:RC04N0044_Speed_Setpoint_Command , om:RC04N0044_SetpointMin , om:RC04N0044_OccSensingPoint , om:RC04N0044_Run_Request_Command , om:RC04N0044_TempSensingPoint , om:RC04N0044_Mode_Command , om:RC04N0044_OffCommand ;
-        saref:hasFunction    om:RC04N0044_StartStopFunction , om:RC04N0044_TempSensingFunction , om:RC04N0044_SetPointFunction , om:RC04N0044_OnOffFunction , om:RC04N0044_OccSensingFunction ;
-        s4ener:serialNumber  "RC04N0044" .
-
-om:RC04N0051_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R237" ] .
-
-om:RC04N0047_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R184" ] ;
-        saref:isCommandOf         om:RC04N0047_OccSensingFunction .
-
-om:RC04N0052_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0052_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0054_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R466" ] ;
-        saref:isCommandOf         om:RC04N0054_OnOffFunction .
-
-om:RC04N0044_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0044_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0046_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R26" ] ;
-        saref:isCommandOf         om:RC04N0046_OnOffFunction .
-
-om:_OccProperty  a  saref:Occupancy .
-
-om:RC04N0045_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R46" ] ;
-        saref:isCommandOf         om:RC04N0045_OnOffFunction .
-
-om:RC04N0058_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0058_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R388" ] ;
-        saref:isCommandOf         om:RC04N0058_SetPointFunction .
-
-om:RC04N0050_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R240" ] ;
-        saref:isCommandOf         om:RC04N0050_TempSensingFunction .
-
-om:RC04N0058_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0058_ZoneSetPoint .
-
-om:RC04N0044_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R77" ] .
-
-om:RC04N0041_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R15" ] .
-
-om:RC04N0057_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0057_Delay_Parameter , om:RC04N0057_ZoneSetPoint , om:RC04N0057_OffCommand , om:RC04N0057_Lockout_Command , om:RC04N0057_SetpointMin , om:RC04N0057_TempSensingPoint , om:RC04N0057_OnCommand , om:RC04N0057_OccSensingPoint , om:RC04N0057_SetpointMax , om:RC04N0057_Run_Request_Command , om:RC04N0057_Mode_Command , om:RC04N0057_Speed_Setpoint_Command ;
-        saref:hasFunction    om:RC04N0057_SetPointFunction , om:RC04N0057_OnOffFunction , om:RC04N0057_StartStopFunction , om:RC04N0057_TempSensingFunction , om:RC04N0057_OccSensingFunction ;
-        s4ener:serialNumber  "RC04N0057" .
-
-om:RC04N0053_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R369" ] .
-
-om:RC04N0047_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0047_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0048_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R298" ] ;
-        saref:isCommandOf         om:RC04N0048_StartStopFunction .
-
-om:RC04N0049_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R274" ] .
-
-om:RC04N0048_Controller
-        a                    s4bldg:UnitaryControlElement , brick:Thermostat ;
-        brick:hasPoint       om:RC04N0048_Speed_Setpoint_Command , om:RC04N0048_Mode_Command , om:RC04N0048_OccSensingPoint , om:RC04N0048_Delay_Parameter , om:RC04N0048_SetpointMin , om:RC04N0048_OnCommand , om:RC04N0048_OffCommand , om:RC04N0048_Lockout_Command , om:RC04N0048_Run_Request_Command , om:RC04N0048_TempSensingPoint , om:RC04N0048_ZoneSetPoint , om:RC04N0048_SetpointMax ;
-        saref:hasFunction    om:RC04N0048_OccSensingFunction , om:RC04N0048_OnOffFunction , om:RC04N0048_SetPointFunction , om:RC04N0048_StartStopFunction , om:RC04N0048_TempSensingFunction ;
-        s4ener:serialNumber  "RC04N0048" .
-
-om:RC04N0045_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R57" ] .
-
-om:RC04N0044_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R78" ] ;
-        saref:isCommandOf         om:RC04N0044_StartStopFunction .
-
-om:RC04N0058_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0058_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R386" ] ;
-        saref:isCommandOf         om:RC04N0058_OnOffFunction .
-
-om:RC04N0048_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0048_ZoneSetPoint .
-
-om:RC04N0055_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0055_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R449" ] .
-
-om:RC04N0058_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0058_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R399" ] .
-
-om:RC04N0049_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R266" ] ;
-        saref:isCommandOf         om:RC04N0049_OnOffFunction .
-
-om:RC04N0044_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R66" ] ;
-        saref:isCommandOf         om:RC04N0044_OnOffFunction .
-
-om:RC04N0051_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R235" ] .
-
-om:RC04N0058_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0058_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R384" ] ;
-        saref:isCommandOf         om:RC04N0058_OccSensingFunction .
-
-om:RC04N0048_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R289" ] .
-
-om:RC04N0051_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R226" ] ;
-        saref:isCommandOf         om:RC04N0051_OnOffFunction .
-
-om:RC04N0058_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0058_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R398" ] ;
-        saref:isCommandOf         om:RC04N0058_StartStopFunction .
-
-om:RC04N0041_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R4" ] ;
-        saref:isCommandOf         om:RC04N0041_OccSensingFunction .
-
-om:RC04N0042_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R119" ] .
-
-om:RC04N0054_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R478" ] ;
-        saref:isCommandOf         om:RC04N0054_StartStopFunction .
-
-om:RC04N0046_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R35" ] .
-
-om:RC04N0053_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0053_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0050_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R258" ] ;
-        saref:isCommandOf         om:RC04N0050_StartStopFunction .
-
-om:RC04N0041_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R7" ] .
-
-om:RC04N0056_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R437" ] .
-
-om:RC04N0045_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0045_ZoneSetPoint .
-
-om:RC04N0056_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R435" ] .
-
-om:RC04N0042_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R107" ] .
-
-om:RC04N0043_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R94" ] .
-
-om:RC04N0056_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0056_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0049_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R277" ] .
-
-om:RC04N0057_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R400" ] ;
-        saref:isCommandOf         om:RC04N0057_TempSensingFunction .
-
-om:RC04N0041_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R9" ] .
-
-om:RC04N0056_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0056_ZoneSetPoint .
-
-om:RC04N0043_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0043_OffCommand , om:RC04N0043_Lockout_Command , om:RC04N0043_TempSensingPoint , om:RC04N0043_SetpointMax , om:RC04N0043_SetpointMin , om:RC04N0043_Delay_Parameter , om:RC04N0043_Run_Request_Command , om:RC04N0043_OccSensingPoint , om:RC04N0043_Speed_Setpoint_Command , om:RC04N0043_Mode_Command , om:RC04N0043_ZoneSetPoint , om:RC04N0043_OnCommand ;
-        saref:hasFunction    om:RC04N0043_TempSensingFunction , om:RC04N0043_SetPointFunction , om:RC04N0043_OccSensingFunction , om:RC04N0043_OnOffFunction , om:RC04N0043_StartStopFunction ;
-        s4ener:serialNumber  "RC04N0043" .
-
-om:RC04N0043_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R87" ] .
-
-om:RC04N0053_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R374" ] .
-
-om:RC04N0053_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R379" ] .
-
-om:RC04N0057_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R406" ] ;
-        saref:isCommandOf         om:RC04N0057_OnOffFunction .
-
-om:RC04N0044_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R66" ] ;
-        saref:isCommandOf         om:RC04N0044_OnOffFunction .
-
-om:RC04N0047_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R180" ] ;
-        saref:isCommandOf         om:RC04N0047_TempSensingFunction .
-
-om:RC04N0042_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0042_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0058_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0058_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R389" ] .
-
-om:RC04N0053_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R364" ] ;
-        saref:isCommandOf         om:RC04N0053_OccSensingFunction .
-
-om:RC04N0050_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R246" ] ;
-        saref:isCommandOf         om:RC04N0050_OnOffFunction .
-
-om:RC04N0044_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R67" ] .
-
-om:RC04N0050_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R247" ] .
-
-om:RC04N0046_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R39" ] .
-
-om:_PriceProperty  a  saref:Price .
-
-om:RC04N0057_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0057_Run_Request_Command .
-
-om:RC04N0056_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0056_TempSensingPoint , om:RC04N0056_Lockout_Command , om:RC04N0056_Speed_Setpoint_Command , om:RC04N0056_OffCommand , om:RC04N0056_SetpointMax , om:RC04N0056_OnCommand , om:RC04N0056_Delay_Parameter , om:RC04N0056_ZoneSetPoint , om:RC04N0056_OccSensingPoint , om:RC04N0056_Mode_Command , om:RC04N0056_Run_Request_Command , om:RC04N0056_SetpointMin ;
-        saref:hasFunction    om:RC04N0056_OccSensingFunction , om:RC04N0056_StartStopFunction , om:RC04N0056_TempSensingFunction , om:RC04N0056_SetPointFunction , om:RC04N0056_OnOffFunction ;
-        s4ener:serialNumber  "RC04N0056" .
-
-om:RC04N0041_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0041_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0047_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0047_ZoneSetPoint , om:RC04N0047_OccSensingPoint , om:RC04N0047_SetpointMax , om:RC04N0047_OffCommand , om:RC04N0047_Delay_Parameter , om:RC04N0047_Mode_Command , om:RC04N0047_OnCommand , om:RC04N0047_TempSensingPoint , om:RC04N0047_SetpointMin , om:RC04N0047_Run_Request_Command , om:RC04N0047_Lockout_Command , om:RC04N0047_Speed_Setpoint_Command ;
-        saref:hasFunction    om:RC04N0047_SetPointFunction , om:RC04N0047_OccSensingFunction , om:RC04N0047_StartStopFunction , om:RC04N0047_OnOffFunction , om:RC04N0047_TempSensingFunction ;
-        s4ener:serialNumber  "RC04N0047" .
-
-om:RC04N0050_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R257" ] .
-
-om:RC04N0048_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R294" ] .
-
-om:RC04N0046_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R24" ] ;
-        saref:isCommandOf         om:RC04N0046_OccSensingFunction .
-
-om:RC04N0057_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R418" ] ;
-        saref:isCommandOf         om:RC04N0057_StartStopFunction .
-
-om:RC04N0057_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R406" ] ;
-        saref:isCommandOf         om:RC04N0057_OnOffFunction .
-
-om:RC04N0051_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R227" ] .
-
-om:RC04N0055_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0055_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R446" ] ;
-        saref:isCommandOf         om:RC04N0055_OnOffFunction .
-
-om:RC04N0048_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R286" ] ;
-        saref:isCommandOf         om:RC04N0048_OnOffFunction .
-
-om:RC04N0054_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R460" ] ;
-        saref:isCommandOf         om:RC04N0054_TempSensingFunction .
-
-om:RC04N0056_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0056_Run_Request_Command .
-
-om:RC04N0053_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0053_ZoneSetPoint .
-
-om:RC04N0050_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R255" ] .
-
-om:RC04N0043_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R97" ] .
-
-om:RC04N0058_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0058_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R394" ] .
-
-om:RC04N0052_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R207" ] .
-
-om:RC04N0044_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R60" ] ;
-        saref:isCommandOf         om:RC04N0044_TempSensingFunction .
-
-om:RC04N0051_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R229" ] .
-
-om:RC04N0055_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0055_Run_Request_Command .
-
-om:RC04N0043_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0043_ZoneSetPoint .
-
-om:RC04N0046_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0046_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0057_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R419" ] .
-
-om:RC04N0053_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R366" ] ;
-        saref:isCommandOf         om:RC04N0053_OnOffFunction .
-
-om:RC04N0053_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R367" ] .
-
-om:RC04N0045_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R55" ] .
-
-om:RC04N0049_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0049_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0057_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R404" ] ;
-        saref:isCommandOf         om:RC04N0057_OccSensingFunction .
-
-om:RC04N0054_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0054_Run_Request_Command .
-
-om:RC04N0050_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0050_OffCommand , om:RC04N0050_OnCommand .
-
-om:RC04N0045_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0045_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0049_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0049_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0054_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R467" ] .
-
-om:RC04N0046_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R29" ] .
-
-om:RC04N0041_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0041_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0051_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R220" ] ;
-        saref:isCommandOf         om:RC04N0051_TempSensingFunction .
-
-om:RC04N0041_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R19" ] .
-
-om:RC04N0055_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0055_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R455" ] .
-
-om:RC04N0050_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0050_ZoneSetPoint .
-
-om:RC04N0050_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0050_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0042_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R114" ] .
-
-om:RC04N0053_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0053_Run_Request_Command .
-
-om:RC04N0055_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0055_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R447" ] .
-
-om:RC04N0055_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0055_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R457" ] .
-
-om:RC04N0041_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R0" ] ;
-        saref:isCommandOf         om:RC04N0041_TempSensingFunction .
-
-om:RC04N0049_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0049_ZoneSetPoint .
-
-om:RC04N0052_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R214" ] .
-
-om:RC04N0047_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R186" ] ;
-        saref:isCommandOf         om:RC04N0047_OnOffFunction .
-
-om:RC04N0055_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0055_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0056_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R427" ] .
-
-om:RC04N0052_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0052_Run_Request_Command .
-
-om:RC04N0041_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0041_OffCommand , om:RC04N0041_OnCommand .
-
-om:RC04N0048_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R297" ] .
-
-om:RC04N0051_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0051_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0049_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0049_Run_Request_Command .
-
-om:RC04N0055_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0055_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0046_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0046_ZoneSetPoint , om:RC04N0046_Lockout_Command , om:RC04N0046_SetpointMax , om:RC04N0046_TempSensingPoint , om:RC04N0046_OffCommand , om:RC04N0046_OccSensingPoint , om:RC04N0046_Run_Request_Command , om:RC04N0046_Delay_Parameter , om:RC04N0046_OnCommand , om:RC04N0046_Mode_Command , om:RC04N0046_Speed_Setpoint_Command , om:RC04N0046_SetpointMin ;
-        saref:hasFunction    om:RC04N0046_OnOffFunction , om:RC04N0046_TempSensingFunction , om:RC04N0046_StartStopFunction , om:RC04N0046_OccSensingFunction , om:RC04N0046_SetPointFunction ;
-        s4ener:serialNumber  "RC04N0046" .
-
-om:RC04N0051_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R224" ] ;
-        saref:isCommandOf         om:RC04N0051_OccSensingFunction .
-
-om:RC04N0052_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R219" ] .
-
-om:RC04N0047_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R194" ] .
-
-om:RC04N0052_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0052_TempSensingPoint , om:RC04N0052_Delay_Parameter , om:RC04N0052_Run_Request_Command , om:RC04N0052_SetpointMax , om:RC04N0052_Speed_Setpoint_Command , om:RC04N0052_Mode_Command , om:RC04N0052_SetpointMin , om:RC04N0052_OnCommand , om:RC04N0052_Lockout_Command , om:RC04N0052_OffCommand , om:RC04N0052_ZoneSetPoint , om:RC04N0052_OccSensingPoint ;
-        saref:hasFunction    om:RC04N0052_TempSensingFunction , om:RC04N0052_StartStopFunction , om:RC04N0052_OccSensingFunction , om:RC04N0052_OnOffFunction , om:RC04N0052_SetPointFunction ;
-        s4ener:serialNumber  "RC04N0052" .
-
-om:RC04N0045_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R46" ] ;
-        saref:isCommandOf         om:RC04N0045_OnOffFunction .
-
-om:RC04N0047_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R186" ] ;
-        saref:isCommandOf         om:RC04N0047_OnOffFunction .
-
-om:RC04N0047_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R198" ] ;
-        saref:isCommandOf         om:RC04N0047_StartStopFunction .
-
-om:RC04N0048_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0048_Run_Request_Command .
-
-om:RC04N0058_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0058_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0054_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R469" ] .
-
-om:RC04N0053_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R366" ] ;
-        saref:isCommandOf         om:RC04N0053_OnOffFunction .
-
-om:RC04N0051_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0051_OffCommand , om:RC04N0051_OnCommand .
-
-om:RC04N0043_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R98" ] ;
-        saref:isCommandOf         om:RC04N0043_StartStopFunction .
-
-om:RC04N0052_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R204" ] ;
-        saref:isCommandOf         om:RC04N0052_OccSensingFunction .
-
-om:RC04N0045_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R59" ] .
-
-om:RC04N0048_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0048_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0056_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R429" ] .
-
-om:RC04N0057_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R414" ] .
-
-om:RC04N0046_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0046_ZoneSetPoint .
-
-om:RC04N0045_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R44" ] ;
-        saref:isCommandOf         om:RC04N0045_OccSensingFunction .
-
-om:RC04N0047_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0047_Run_Request_Command .
-
-om:RC04N0041_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R8" ] ;
-        saref:isCommandOf         om:RC04N0041_SetPointFunction .
-
-om:RC04N0058_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0058_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R380" ] ;
-        saref:isCommandOf         om:RC04N0058_TempSensingFunction .
-
-om:RC04N0043_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R86" ] ;
-        saref:isCommandOf         om:RC04N0043_OnOffFunction .
-
-om:RC04N0044_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0044_OffCommand , om:RC04N0044_OnCommand .
-
-om:RC04N0049_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R269" ] .
-
-om:RC04N0042_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R117" ] .
-
-om:RC04N0045_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R47" ] .
-
-om:RC04N0044_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R75" ] .
-
-om:RC04N0053_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R378" ] ;
-        saref:isCommandOf         om:RC04N0053_StartStopFunction .
-
-om:RC04N0042_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R108" ] ;
-        saref:isCommandOf         om:RC04N0042_SetPointFunction .
-
-om:RC04N0046_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0046_Run_Request_Command .
-
-om:RC04N0058_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0058_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0042_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0042_OffCommand , om:RC04N0042_OnCommand .
-
-om:RC04N0043_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0043_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0048_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R280" ] ;
-        saref:isCommandOf         om:RC04N0048_TempSensingFunction .
-
-om:RC04N0054_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0054_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0046_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R27" ] .
-
-om:RC04N0050_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0050_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0054_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R475" ] .
-
-om:RC04N0056_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R439" ] .
-
-om:RC04N0043_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R88" ] ;
-        saref:isCommandOf         om:RC04N0043_SetPointFunction .
-
-om:RC04N0041_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R6" ] ;
-        saref:isCommandOf         om:RC04N0041_OnOffFunction .
-
-om:RC04N0045_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0045_Run_Request_Command .
-
-om:RC04N0041_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0041_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R14" ] .
-
-om:RC04N0054_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0054_OffCommand , om:RC04N0054_OnCommand .
-
-om:RC04N0056_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R424" ] ;
-        saref:isCommandOf         om:RC04N0056_OccSensingFunction .
-
-om:RC04N0049_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R279" ] .
-
-om:RC04N0047_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R187" ] .
-
-om:RC04N0052_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0052_OffCommand , om:RC04N0052_OnCommand .
-
-om:RC04N0042_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R109" ] .
-
-om:RC04N0050_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R248" ] ;
-        saref:isCommandOf         om:RC04N0050_SetPointFunction .
-
-om:RC04N0051_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R234" ] .
-
-om:RC04N0055_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0055_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R440" ] ;
-        saref:isCommandOf         om:RC04N0055_TempSensingFunction .
-
-om:RC04N0046_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R38" ] ;
-        saref:isCommandOf         om:RC04N0046_StartStopFunction .
-
-om:RC04N0054_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0054_ZoneSetPoint .
-
-om:RC04N0048_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0048_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0049_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R264" ] ;
-        saref:isCommandOf         om:RC04N0049_OccSensingFunction .
-
-om:RC04N0044_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R69" ] .
-
-om:RC04N0049_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R266" ] ;
-        saref:isCommandOf         om:RC04N0049_OnOffFunction .
-
-om:RC04N0049_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R275" ] .
-
-om:RC04N0048_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R287" ] .
-
-om:RC04N0051_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R228" ] ;
-        saref:isCommandOf         om:RC04N0051_SetPointFunction .
-
-om:RC04N0054_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R477" ] .
-
-om:RC04N0045_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0045_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R40" ] ;
-        saref:isCommandOf         om:RC04N0045_TempSensingFunction .
-
-om:RC04N0045_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0045_OffCommand , om:RC04N0045_OnCommand .
-
-om:RC04N0056_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R426" ] ;
-        saref:isCommandOf         om:RC04N0056_OnOffFunction .
-
-om:RC04N0051_Controller
-        a                    s4bldg:UnitaryControlElement , brick:Thermostat ;
-        brick:hasPoint       om:RC04N0051_ZoneSetPoint , om:RC04N0051_TempSensingPoint , om:RC04N0051_SetpointMin , om:RC04N0051_Delay_Parameter , om:RC04N0051_Speed_Setpoint_Command , om:RC04N0051_SetpointMax , om:RC04N0051_OnCommand , om:RC04N0051_Lockout_Command , om:RC04N0051_Run_Request_Command , om:RC04N0051_OffCommand , om:RC04N0051_Mode_Command , om:RC04N0051_OccSensingPoint ;
-        saref:hasFunction    om:RC04N0051_StartStopFunction , om:RC04N0051_TempSensingFunction , om:RC04N0051_OccSensingFunction , om:RC04N0051_SetPointFunction , om:RC04N0051_OnOffFunction ;
-        s4ener:serialNumber  "RC04N0051" .
-
-om:RC04N0049_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0049_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R267" ] .
-
-om:RC04N0046_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0046_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R34" ] .
-
-om:RC04N0042_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0042_Delay_Parameter , om:RC04N0042_SetpointMin , om:RC04N0042_Run_Request_Command , om:RC04N0042_OffCommand , om:RC04N0042_OccSensingPoint , om:RC04N0042_Speed_Setpoint_Command , om:RC04N0042_TempSensingPoint , om:RC04N0042_ZoneSetPoint , om:RC04N0042_Mode_Command , om:RC04N0042_Lockout_Command , om:RC04N0042_SetpointMax , om:RC04N0042_OnCommand ;
-        saref:hasFunction    om:RC04N0042_StartStopFunction , om:RC04N0042_TempSensingFunction , om:RC04N0042_OnOffFunction , om:RC04N0042_SetPointFunction , om:RC04N0042_OccSensingFunction ;
-        s4ener:serialNumber  "RC04N0042" .
-
-om:RC04N0052_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R208" ] ;
-        saref:isCommandOf         om:RC04N0052_SetPointFunction .
-
-om:RC04N0047_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0047_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R197" ] .
-
-om:RC04N0056_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R438" ] ;
-        saref:isCommandOf         om:RC04N0056_StartStopFunction .
-
-om:RC04N0052_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0052_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0052_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R206" ] ;
-        saref:isCommandOf         om:RC04N0052_OnOffFunction .
-
-om:RC04N0043_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0043_OffCommand , om:RC04N0043_OnCommand .
-
-om:_HumProperty  a  saref:Humidity .
-
-om:RC04N0052_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R218" ] ;
-        saref:isCommandOf         om:RC04N0052_StartStopFunction .
-
-om:RC04N0043_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R86" ] ;
-        saref:isCommandOf         om:RC04N0043_OnOffFunction .
-
-om:_PowerProperty  a  saref:Power .
-
-om:RC04N0049_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0049_OffCommand , om:RC04N0049_OccSensingPoint , om:RC04N0049_SetpointMin , om:RC04N0049_Run_Request_Command , om:RC04N0049_Lockout_Command , om:RC04N0049_Delay_Parameter , om:RC04N0049_Speed_Setpoint_Command , om:RC04N0049_ZoneSetPoint , om:RC04N0049_Mode_Command , om:RC04N0049_TempSensingPoint , om:RC04N0049_SetpointMax , om:RC04N0049_OnCommand ;
-        saref:hasFunction    om:RC04N0049_OnOffFunction , om:RC04N0049_SetPointFunction , om:RC04N0049_TempSensingFunction , om:RC04N0049_StartStopFunction , om:RC04N0049_OccSensingFunction ;
-        s4ener:serialNumber  "RC04N0049" .
-
-om:RC04N0056_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R434" ] .
-
-om:RC04N0053_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0053_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R368" ] ;
-        saref:isCommandOf         om:RC04N0053_SetPointFunction .
-
-om:RC04N0052_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R200" ] ;
-        saref:isCommandOf         om:RC04N0052_TempSensingFunction .
-
-om:_TempProperty  a  saref:Temperature .
-
-om:RC04N0050_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0050_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R244" ] ;
-        saref:isCommandOf         om:RC04N0050_OccSensingFunction .
-
-om:RC04N0051_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0051_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R239" ] .
-
-om:RC04N0055_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0055_OffCommand , om:RC04N0055_OnCommand .
-
-om:RC04N0051_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0051_ZoneSetPoint .
-
-om:RC04N0055_Controller
-        a                    s4bldg:UnitaryControlElement , brick:Thermostat ;
-        brick:hasPoint       om:RC04N0055_Speed_Setpoint_Command , om:RC04N0055_OccSensingPoint , om:RC04N0055_OffCommand , om:RC04N0055_SetpointMin , om:RC04N0055_Mode_Command , om:RC04N0055_TempSensingPoint , om:RC04N0055_ZoneSetPoint , om:RC04N0055_OnCommand , om:RC04N0055_Lockout_Command , om:RC04N0055_SetpointMax , om:RC04N0055_Run_Request_Command , om:RC04N0055_Delay_Parameter ;
-        saref:hasFunction    om:RC04N0055_OnOffFunction , om:RC04N0055_OccSensingFunction , om:RC04N0055_SetPointFunction , om:RC04N0055_TempSensingFunction , om:RC04N0055_StartStopFunction ;
-        s4ener:serialNumber  "RC04N0055" .
-
-om:RC04N0054_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R466" ] ;
-        saref:isCommandOf         om:RC04N0054_OnOffFunction .
-
-om:_PresProperty  a  saref:Pressure .
-
-om:RC04N0057_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0057_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R407" ] .
-
-om:RC04N0056_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0056_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R426" ] ;
-        saref:isCommandOf         om:RC04N0056_OnOffFunction .
-
-om:RC04N0043_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R84" ] ;
-        saref:isCommandOf         om:RC04N0043_OccSensingFunction .
-
-om:RC04N0044_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R79" ] .
-
-om:RC04N0053_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0053_OffCommand , om:RC04N0053_OnCommand .
-
-om:RC04N0051_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0051_Run_Request_Command .
-
-om:RC04N0054_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0054_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R468" ] ;
-        saref:isCommandOf         om:RC04N0054_SetPointFunction .
-
-om:RC04N0052_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0052_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R209" ] .
-
-om:RC04N0042_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0042_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R100" ] ;
-        saref:isCommandOf         om:RC04N0042_TempSensingFunction .
-
-om:RC04N0043_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0043_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R95" ] .
-
-om:RC04N0057_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0057_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0041_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0041_ZoneSetPoint .
-
-om:RC04N0044_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0044_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R64" ] ;
-        saref:isCommandOf         om:RC04N0044_OccSensingFunction .
-
-om:RC04N0058_Mode_Command
-        a                         brick:Mode_Command ;
-        brick:isPointOf           om:RC04N0058_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R387" ] .
+@prefix brick:        <https://brickschema.org/schema/Brick#> .
+@prefix om:           <http://openmetrics.eu/openmetrics#> .
+@prefix owl:          <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/>> .
+@prefix rdf:          <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:         <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ref:          <https://brickschema.org/schema/Brick/ref#> .
+@prefix s4bldg:       <https://saref.etsi.org/saref4bldg#> .
+@prefix s4ener:       <https://saref.etsi.org/saref4ener#> .
+@prefix saref:        <https://saref.etsi.org/core#> .
+@prefix schema:       <http://schema.org#> .
+@prefix xsd:          <http://www.w3.org/2001/XMLSchema#> .
 
 om:RC04N0058_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0058_Controller ;
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0058_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R397" ] .
 
-om:RC04N0050_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0050_Run_Request_Command .
-
-om:RC04N0052_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0052_Controller ;
+om:RC04N0055_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0055_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R206" ] ;
-        saref:isCommandOf         om:RC04N0052_OnOffFunction .
+                          "TUC.245.76.R446" ] .
 
-om:RC04N0044_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0044_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
-
-om:RC04N0053_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0053_Controller ;
+om:RC04N0050_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0050_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R375" ] .
+                          "TUC.245.76.R246" ] .
 
-om:RC04N0041_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0041_Controller ;
+om:RC04N00_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N00_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R17" ] .
+                          "TUC.245.76.R7" ] .
 
-om:RC04N0046_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0046_OffCommand , om:RC04N0046_OnCommand .
-
-om:RC04N0047_Speed_Setpoint_Command
-        a                         brick:Speed_Setpoint ;
-        brick:isPointOf           om:RC04N0047_Controller ;
+om:RC04N0048_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0048_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R189" ] .
+                          "TUC.245.76.R280" ] ;
+        saref:observes            om:TempProperty .
 
-om:RC04N0057_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0057_ZoneSetPoint .
-
-om:RC04N0050_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0050_Controller ;
+om:RC04N0043_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0043_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R254" ] .
+                          "TUC.245.76.R84" ] ;
+        saref:observes            om:OccProperty .
 
-om:RC04N0042_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0042_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0055_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0055_Controller ;
+om:RC04N0043_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0043_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R459" ] .
+                          "TUC.245.76.R98" ] .
 
-om:RC04N0050_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0050_Controller ;
+om:RC04N0046_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0046_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R246" ] ;
-        saref:isCommandOf         om:RC04N0050_OnOffFunction .
+                          "TUC.245.76.R24" ] ;
+        saref:observes            om:OccProperty .
 
-om:RC04N0048_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0048_Controller ;
-        ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R295" ] .
+om:EnergyProperty  rdf:type  quantitykind:Energy , saref:Property .
 
-om:RC04N0056_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0056_OffCommand , om:RC04N0056_OnCommand .
-
-om:RC04N0047_SetPointFunction
-        a                 saref:LevelControlFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0047_ZoneSetPoint .
+om:RC04N0052_Equipment
+        rdf:type             brick:Thermostat , s4bldg:UnitaryControlElement ;
+        brick:hasPoint       om:RC04N0052_OccSensingPoint , om:RC04N0052_Mode_Command , om:RC04N0052_Lockout_Command , om:RC04N0052_OnOffCommand , om:RC04N0052_TempSensingPoint , om:RC04N0052_Run_Request_Command , om:RC04N0052_Delay_Parameter ;
+        s4ener:serialNumber  "RC04N0052" .
 
 om:RC04N0055_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0055_Controller ;
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0055_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R444" ] ;
-        saref:isCommandOf         om:RC04N0055_OccSensingFunction .
+        saref:observes            om:OccProperty .
 
 om:RC04N0048_Lockout_Command
-        a                         brick:Lockout_Command ;
-        brick:isPointOf           om:RC04N0048_Controller ;
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0048_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R299" ] .
 
-om:RC04N0050_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0050_SetpointMax , om:RC04N0050_OffCommand , om:RC04N0050_OnCommand , om:RC04N0050_Speed_Setpoint_Command , om:RC04N0050_SetpointMin , om:RC04N0050_Delay_Parameter , om:RC04N0050_Mode_Command , om:RC04N0050_Run_Request_Command , om:RC04N0050_OccSensingPoint , om:RC04N0050_Lockout_Command , om:RC04N0050_TempSensingPoint , om:RC04N0050_ZoneSetPoint ;
-        saref:hasFunction    om:RC04N0050_OnOffFunction , om:RC04N0050_SetPointFunction , om:RC04N0050_OccSensingFunction , om:RC04N0050_StartStopFunction , om:RC04N0050_TempSensingFunction ;
-        s4ener:serialNumber  "RC04N0050" .
-
-om:RC04N0045_OccSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0045_OccSensingPoint ;
-        saref:hasSensorType  om:_OccProperty .
-
-om:RC04N0058_SetpointMax
-        a                         brick:Max_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0058_Controller ;
+om:RC04N0046_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0046_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R395" ] .
+                          "TUC.245.76.R27" ] .
 
-om:RC04N0041_Controller
-        a                    s4bldg:UnitaryControlElement , brick:Thermostat ;
-        brick:hasPoint       om:RC04N0041_SetpointMax , om:RC04N0041_Lockout_Command , om:RC04N0041_SetpointMin , om:RC04N0041_OccSensingPoint , om:RC04N0041_Run_Request_Command , om:RC04N0041_Delay_Parameter , om:RC04N0041_OnCommand , om:RC04N0041_ZoneSetPoint , om:RC04N0041_TempSensingPoint , om:RC04N0041_OffCommand , om:RC04N0041_Speed_Setpoint_Command , om:RC04N0041_Mode_Command ;
-        saref:hasFunction    om:RC04N0041_OccSensingFunction , om:RC04N0041_StartStopFunction , om:RC04N0041_OnOffFunction , om:RC04N0041_TempSensingFunction , om:RC04N0041_SetPointFunction ;
+om:RC04N0050_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0050_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R240" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0055_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0055_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R447" ] .
+
+om:RC04N0057_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0057_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R419" ] .
+
+om:RC04N0041_Equipment
+        rdf:type             s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N0041_Delay_Parameter , om:RC04N0041_OccSensingPoint , om:RC04N0041_Lockout_Command , om:RC04N0041_TempSensingPoint , om:RC04N0041_OnOffCommand , om:RC04N0041_Run_Request_Command ;
         s4ener:serialNumber  "RC04N0041" .
 
+om:RC04N0058_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0058_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R380" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0041_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0041_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R19" ] .
+
+om:RC04N0056_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0056_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R426" ] .
+
+om:RC04N0042_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0042_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R106" ] .
+
+om:RC04N0051_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0051_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R226" ] .
+
+om:RC04N0048_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0048_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R297" ] .
+
+om:RC04N0050_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0050_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R259" ] .
+
+om:RC04N0054_Equipment
+        rdf:type             s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N0054_Run_Request_Command , om:RC04N0054_OnOffCommand , om:RC04N0054_Lockout_Command , om:RC04N0054_Mode_Command , om:RC04N0054_TempSensingPoint , om:RC04N0054_OccSensingPoint , om:RC04N0054_Delay_Parameter ;
+        s4ener:serialNumber  "RC04N0054" .
+
+om:RC04N0047_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0047_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R198" ] .
+
+om:RC04N0046_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0046_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R38" ] .
+
+om:RC04N0047_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0047_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R180" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0057_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0057_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R417" ] .
+
+om:RC04N0043_Equipment
+        rdf:type             brick:Thermostat , s4bldg:UnitaryControlElement ;
+        brick:hasPoint       om:RC04N0043_TempSensingPoint , om:RC04N0043_OnOffCommand , om:RC04N0043_Lockout_Command , om:RC04N0043_Delay_Parameter , om:RC04N0043_Mode_Command , om:RC04N0043_Run_Request_Command , om:RC04N0043_OccSensingPoint ;
+        s4ener:serialNumber  "RC04N0043" .
+
+om:RC04N0042_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0042_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R104" ] ;
+        saref:observes            om:OccProperty .
+
+om:HumProperty  rdf:type  quantitykind:Humidity , saref:Property .
+
+om:RC04N0047_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0047_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R187" ] .
+
+om:RC04N0045_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0045_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R44" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0056_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0056_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R427" ] .
+
+om:RC04N0042_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0042_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R107" ] .
+
+om:RC04N0057_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0057_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R406" ] .
+
+om:RC04N0051_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0051_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R224" ] ;
+        saref:observes            om:OccProperty .
+
+om:PowerProperty  rdf:type  quantitykind:Power , saref:Property .
+
+om:RC04N0054_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0054_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R464" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0047_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0047_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R199" ] .
+
+om:PresProperty  rdf:type  quantitykind:Pressure , saref:Property .
+
+om:RC04N0057_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0057_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R400" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0043_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0043_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R86" ] .
+
+om:RC04N0052_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0052_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R206" ] .
+
+om:RC04N0056_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0056_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R439" ] .
+
+om:RC04N0045_Equipment
+        rdf:type             s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N0045_OccSensingPoint , om:RC04N0045_Mode_Command , om:RC04N0045_Run_Request_Command , om:RC04N0045_TempSensingPoint , om:RC04N0045_Delay_Parameter , om:RC04N0045_OnOffCommand , om:RC04N0045_Lockout_Command ;
+        s4ener:serialNumber  "RC04N0045" .
+
+om:RC04N0051_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0051_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R238" ] .
+
+om:RC04N0050_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0050_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R258" ] .
+
+om:RC04N0044_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0044_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R77" ] .
+
+om:RC04N0046_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0046_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R20" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0047_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0047_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R197" ] .
+
+om:RC04N0056_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0056_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R437" ] .
+
+om:RC04N0048_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0048_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R287" ] .
+
+om:RC04N0043_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0043_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R87" ] .
+
+om:RC04N0049_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0049_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R266" ] .
+
+om:RC04N0058_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0058_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R386" ] .
+
+om:RC04N0053_Equipment
+        rdf:type             brick:Thermostat , s4bldg:UnitaryControlElement ;
+        brick:hasPoint       om:RC04N0053_TempSensingPoint , om:RC04N0053_Mode_Command , om:RC04N0053_Delay_Parameter , om:RC04N0053_Run_Request_Command , om:RC04N0053_OccSensingPoint , om:RC04N0053_Lockout_Command , om:RC04N0053_OnOffCommand ;
+        s4ener:serialNumber  "RC04N0053" .
+
+om:RC04N0044_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0044_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R66" ] .
+
+om:RC04N0041_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0041_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R4" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0053_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0053_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R366" ] .
+
+om:RC04N0044_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0044_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R64" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0056_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0056_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R420" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0055_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0055_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R458" ] .
+
+om:RC04N0054_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0054_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R478" ] .
+
+om:RC04N0050_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0050_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R244" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0053_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0053_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R364" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0046_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0046_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R39" ] .
+
+om:RC04N0045_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0045_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R40" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0055_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0055_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R459" ] .
+
+om:RC04N0055_Equipment
+        rdf:type             s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N0055_TempSensingPoint , om:RC04N0055_Delay_Parameter , om:RC04N0055_OnOffCommand , om:RC04N0055_Lockout_Command , om:RC04N0055_Mode_Command , om:RC04N0055_OccSensingPoint , om:RC04N0055_Run_Request_Command ;
+        s4ener:serialNumber  "RC04N0055" .
+
+om:RC04N0049_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0049_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R267" ] .
+
+om:RC04N0043_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0043_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R97" ] .
+
+om:RC04N0046_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0046_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R37" ] .
+
+om:RC04N0044_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0044_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R67" ] .
+
+om:TempProperty  rdf:type  quantitykind:Temperature , saref:Property .
+
+om:RC04N0044_Equipment
+        rdf:type             brick:Thermostat , s4bldg:UnitaryControlElement ;
+        brick:hasPoint       om:RC04N0044_Delay_Parameter , om:RC04N0044_OnOffCommand , om:RC04N0044_OccSensingPoint , om:RC04N0044_Run_Request_Command , om:RC04N0044_Mode_Command , om:RC04N0044_Lockout_Command , om:RC04N0044_TempSensingPoint ;
+        s4ener:serialNumber  "RC04N0044" .
+
 om:RC04N0052_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0052_Controller ;
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0052_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R217" ] .
 
-om:RC04N0048_OccSensingPoint
-        a                         brick:Occupancy_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0048_Controller ;
+om:RC04N0045_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0045_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R284" ] ;
-        saref:isCommandOf         om:RC04N0048_OccSensingFunction .
+                          "TUC.245.76.R46" ] .
 
-om:RC04N0045_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0045_Controller ;
+om:RC04N0055_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0055_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R54" ] .
+                          "TUC.245.76.R457" ] .
 
-om:RC04N0051_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0051_Controller ;
+om:RC04N0058_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0058_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R226" ] ;
-        saref:isCommandOf         om:RC04N0051_OnOffFunction .
+                          "TUC.245.76.R398" ] .
 
-om:RC04N0058_OnCommand
-        a                         saref:OnCommand , brick:On_Command ;
-        brick:isPointOf           om:RC04N0058_Controller ;
+om:RC04N0057_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0057_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R386" ] ;
-        saref:isCommandOf         om:RC04N0058_OnOffFunction .
+                          "TUC.245.76.R418" ] .
 
-om:RC04N0044_ZoneSetPoint
-        a                         saref:setLevelCommand , brick:Zone_Air_Temperature_Setpoint ;
-        brick:isPointOf           om:RC04N0044_Controller ;
+om:RC04N0057_Equipment
+        rdf:type             s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N0057_TempSensingPoint , om:RC04N0057_Lockout_Command , om:RC04N0057_Mode_Command , om:RC04N0057_Delay_Parameter , om:RC04N0057_Run_Request_Command , om:RC04N0057_OccSensingPoint , om:RC04N0057_OnOffCommand ;
+        s4ener:serialNumber  "RC04N0057" .
+
+om:RC04N0055_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0055_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R68" ] ;
-        saref:isCommandOf         om:RC04N0044_SetPointFunction .
+                          "TUC.245.76.R440" ] ;
+        saref:observes            om:TempProperty .
 
-om:RC04N0042_OffCommand
-        a                         saref:OffCommand , brick:Off_Command ;
-        brick:isPointOf           om:RC04N0042_Controller ;
+om:RC04N0042_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0042_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R106" ] ;
-        saref:isCommandOf         om:RC04N0042_OnOffFunction .
+                          "TUC.245.76.R118" ] .
 
-om:RC04N0049_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0049_OffCommand , om:RC04N0049_OnCommand .
-
-om:RC04N0044_StartStopFunction
-        a                 saref:StartStopFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0044_Run_Request_Command .
-
-om:RC04N0049_TempSensingPoint
-        a                         brick:Zone_Air_Temperature_Sensor , saref:GetSensingDataCommand ;
-        brick:isPointOf           om:RC04N0049_Controller ;
+om:RC04N0041_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0041_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R260" ] ;
-        saref:isCommandOf         om:RC04N0049_TempSensingFunction .
+                          "TUC.245.76.R18" ] .
+
+om:RC04N0046_Equipment
+        rdf:type             s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N0046_OccSensingPoint , om:RC04N0046_OnOffCommand , om:RC04N0046_Delay_Parameter , om:RC04N0046_Mode_Command , om:RC04N0046_TempSensingPoint , om:RC04N0046_Lockout_Command , om:RC04N0046_Run_Request_Command ;
+        s4ener:serialNumber  "RC04N0046" .
+
+om:RC04N0052_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0052_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R204" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0045_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0045_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R59" ] .
+
+om:RC04N0044_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0044_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R60" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0054_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0054_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R479" ] .
+
+om:RC04N0046_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0046_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R26" ] .
+
+om:RC04N0050_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0050_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R247" ] .
+
+om:RC04N0042_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0042_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R117" ] .
+
+om:RC04N0041_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0041_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R6" ] .
+
+om:RC04N0045_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0045_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R57" ] .
+
+om:RC04N0048_Equipment
+        rdf:type             s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N0048_Mode_Command , om:RC04N0048_OccSensingPoint , om:RC04N0048_OnOffCommand , om:RC04N0048_Run_Request_Command , om:RC04N0048_Delay_Parameter , om:RC04N0048_TempSensingPoint , om:RC04N0048_Lockout_Command ;
+        s4ener:serialNumber  "RC04N0048" .
+
+om:RC04N0054_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0054_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R477" ] .
+
+om:RC04N0051_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0051_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R237" ] .
+
+om:RC04N0054_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0054_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R460" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0045_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0045_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R58" ] .
+
+om:RC04N0044_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0044_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R78" ] .
+
+om:RC04N0049_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0049_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R264" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0058_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0058_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R384" ] ;
+        saref:observes            om:OccProperty .
+
+om:OccProperty  rdf:type  quantitykind:Occupancy , saref:Property .
+
+om:RC04N0043_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0043_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R80" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0047_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0047_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R186" ] .
+
+om:RC04N0056_Equipment
+        rdf:type             brick:Thermostat , s4bldg:UnitaryControlElement ;
+        brick:hasPoint       om:RC04N0056_TempSensingPoint , om:RC04N0056_Delay_Parameter , om:RC04N0056_OccSensingPoint , om:RC04N0056_Lockout_Command , om:RC04N0056_OnOffCommand , om:RC04N0056_Run_Request_Command , om:RC04N0056_Mode_Command ;
+        s4ener:serialNumber  "RC04N0056" .
+
+om:RC04N0051_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0051_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R227" ] .
+
+om:RC04N0044_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0044_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R79" ] .
+
+om:RC04N0053_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0053_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R379" ] .
+
+om:RC04N0049_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0049_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R278" ] .
+
+om:RC04N0048_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0048_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R298" ] .
+
+om:RC04N0041_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0041_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R17" ] .
+
+om:RC04N0053_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0053_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R360" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0058_Equipment
+        rdf:type             s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N0058_Lockout_Command , om:RC04N0058_TempSensingPoint , om:RC04N0058_Run_Request_Command , om:RC04N0058_Delay_Parameter , om:RC04N0058_OccSensingPoint , om:RC04N0058_OnOffCommand , om:RC04N0058_Mode_Command ;
+        s4ener:serialNumber  "RC04N0058" .
+
+om:RC04N0050_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0050_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R257" ] .
 
 om:RC04N0053_Delay_Parameter
-        a                         brick:Delay_Parameter ;
-        brick:isPointOf           om:RC04N0053_Controller ;
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0053_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R377" ] .
 
-om:RC04N0042_Run_Request_Command
-        a                         saref:StartCommand , brick:Run_Request_Command ;
-        brick:isPointOf           om:RC04N0042_Controller ;
+om:RC04N0048_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0048_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R118" ] ;
-        saref:isCommandOf         om:RC04N0042_StartStopFunction .
+                          "TUC.245.76.R284" ] ;
+        saref:observes            om:OccProperty .
 
-om:RC04N0055_SetpointMin
-        a                         brick:Min_Temperature_Setpoint_Limit ;
-        brick:isPointOf           om:RC04N0055_Controller ;
+om:RC04N0057_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0057_Equipment ;
         ref:hasExternalReference  [ ref:hasTimeseriesId
-                          "TUC.245.76.R454" ] .
+                          "TUC.245.76.R407" ] .
 
-om:RC04N0047_TempSensingFunction
-        a                    saref:SensingFunction ;
-        saref:hasCommand     om:RC04N0047_TempSensingPoint ;
-        saref:hasSensorType  om:_TempProperty .
+om:RC04N0042_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0042_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R100" ] ;
+        saref:observes            om:TempProperty .
 
-om:RC04N0054_Controller
-        a                    brick:Thermostat , s4bldg:UnitaryControlElement ;
-        brick:hasPoint       om:RC04N0054_Mode_Command , om:RC04N0054_OffCommand , om:RC04N0054_Lockout_Command , om:RC04N0054_ZoneSetPoint , om:RC04N0054_Delay_Parameter , om:RC04N0054_OnCommand , om:RC04N0054_SetpointMin , om:RC04N0054_TempSensingPoint , om:RC04N0054_SetpointMax , om:RC04N0054_OccSensingPoint , om:RC04N0054_Speed_Setpoint_Command , om:RC04N0054_Run_Request_Command ;
-        saref:hasFunction    om:RC04N0054_SetPointFunction , om:RC04N0054_TempSensingFunction , om:RC04N0054_OccSensingFunction , om:RC04N0054_StartStopFunction , om:RC04N0054_OnOffFunction ;
-        s4ener:serialNumber  "RC04N0054" .
+om:RC04N0048_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0048_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R286" ] .
 
-om:RC04N0047_OnOffFunction
-        a                 saref:OnOffFunction , saref:ActuatingFunction ;
-        saref:hasCommand  om:RC04N0047_OffCommand , om:RC04N0047_OnCommand .
+om:RC04N0047_Equipment
+        rdf:type             brick:Thermostat , s4bldg:UnitaryControlElement ;
+        brick:hasPoint       om:RC04N0047_Lockout_Command , om:RC04N0047_OccSensingPoint , om:RC04N0047_OnOffCommand , om:RC04N0047_Delay_Parameter , om:RC04N0047_TempSensingPoint , om:RC04N0047_Mode_Command , om:RC04N0047_Run_Request_Command ;
+        s4ener:serialNumber  "RC04N0047" .
+
+om:RC04N0052_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0052_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R207" ] .
+
+om:RC04N0057_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0057_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R404" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0051_Equipment
+        rdf:type             brick:Thermostat , s4bldg:UnitaryControlElement ;
+        brick:hasPoint       om:RC04N0051_Run_Request_Command , om:RC04N0051_Delay_Parameter , om:RC04N0051_OccSensingPoint , om:RC04N0051_Mode_Command , om:RC04N0051_OnOffCommand , om:RC04N0051_TempSensingPoint , om:RC04N0051_Lockout_Command ;
+        s4ener:serialNumber  "RC04N0051" .
+
+om:RC04N0053_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0053_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R378" ] .
+
+om:RC04N0052_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0052_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R218" ] .
+
+om:RC04N0043_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0043_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R99" ] .
+
+om:RC04N0052_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0052_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R219" ] .
+
+om:RC04N0052_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0052_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R200" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0049_Equipment
+        rdf:type             brick:Thermostat , s4bldg:UnitaryControlElement ;
+        brick:hasPoint       om:RC04N0049_Run_Request_Command , om:RC04N0049_OnOffCommand , om:RC04N0049_Mode_Command , om:RC04N0049_OccSensingPoint , om:RC04N0049_TempSensingPoint , om:RC04N0049_Lockout_Command , om:RC04N0049_Delay_Parameter ;
+        s4ener:serialNumber  "RC04N0049" .
+
+om:RC04N0058_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0058_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R387" ] .
+
+om:RC04N0053_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0053_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R367" ] .
+
+om:RC04N0041_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0041_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R0" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0054_OnOffCommand
+        rdf:type                  brick:On_Off_Command ;
+        brick:isPointOf           om:RC04N0054_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R466" ] .
+
+om:RC04N0047_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0047_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R184" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0049_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0049_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R260" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0056_Run_Request_Command
+        rdf:type                  brick:Run_Request_Command ;
+        brick:isPointOf           om:RC04N0056_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R438" ] .
+
+om:RC04N0042_Equipment
+        rdf:type             brick:Thermostat , s4bldg:UnitaryControlElement ;
+        brick:hasPoint       om:RC04N0042_TempSensingPoint , om:RC04N0042_Run_Request_Command , om:RC04N0042_Lockout_Command , om:RC04N0042_OccSensingPoint , om:RC04N0042_Delay_Parameter , om:RC04N0042_OnOffCommand , om:RC04N0042_Mode_Command ;
+        s4ener:serialNumber  "RC04N0042" .
+
+om:RC04N0056_OccSensingPoint
+        rdf:type                  saref:Sensor , brick:Occupancy_Sensor ;
+        brick:isPointOf           om:RC04N0056_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R424" ] ;
+        saref:observes            om:OccProperty .
+
+om:RC04N0049_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0049_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R279" ] .
+
+om:RC04N0058_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0058_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R399" ] .
+
+om:RC04N0042_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0042_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R119" ] .
+
+om:RC04N0051_TempSensingPoint
+        rdf:type                  saref:Sensor , brick:Temperature_Sensor ;
+        brick:isPointOf           om:RC04N0051_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R220" ] ;
+        saref:observes            om:TempProperty .
+
+om:RC04N0049_Delay_Parameter
+        rdf:type                  brick:Delay_Parameter ;
+        brick:isPointOf           om:RC04N0049_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R277" ] .
+
+om:RC04N0045_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0045_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R47" ] .
+
+om:RC04N0054_Mode_Command
+        rdf:type                  brick:Mode_Command ;
+        brick:isPointOf           om:RC04N0054_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R467" ] .
+
+om:RC04N0051_Lockout_Command
+        rdf:type                  brick:Lockout_Command ;
+        brick:isPointOf           om:RC04N0051_Equipment ;
+        ref:hasExternalReference  [ ref:hasTimeseriesId
+                          "TUC.245.76.R239" ] .
+
+om:RC04N00_Equipment  rdf:type  s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N00_Mode_Command ;
+        s4ener:serialNumber  "RC04N00" .
+
+om:RC04N0050_Equipment
+        rdf:type             s4bldg:UnitaryControlElement , brick:Thermostat ;
+        brick:hasPoint       om:RC04N0050_TempSensingPoint , om:RC04N0050_Mode_Command , om:RC04N0050_OccSensingPoint , om:RC04N0050_Lockout_Command , om:RC04N0050_OnOffCommand , om:RC04N0050_Run_Request_Command , om:RC04N0050_Delay_Parameter ;
+        s4ener:serialNumber  "RC04N0050" .

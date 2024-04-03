@@ -18,12 +18,12 @@ om:ZoneRef_63135  a      ref:IFCReference ;
         ref:ifcGlobalID  "20ATIiG4rFzOwjysAbYjoJ" ;
         ref:ifcName      "I1:453262" .
 
-om:Space_2409  a                  brick:Space ;
+om:Space_2409  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "1raecK5JTC_PHIQqeF3yM2" ;
                                     ref:ifcName      "WC_I4"
                                   ] .
 
-om:Space_2217  a                  brick:Space ;
+om:Space_2217  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4L" ;
                                     ref:ifcName      "WC_I3"
                                   ] .
@@ -48,13 +48,14 @@ om:BuildingStorey_179
                                     ref:ifcName      ""
                                   ] .
 
-om:Space_4766  a                  brick:Space ;
+om:Space_4766  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0047_Controller ;
+        s4bldg:contains           om:RC04N0047_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oV" ;
                                     ref:ifcName      "ROOM_A1"
                                   ] .
 
-om:Space_4382  a                  brick:Space ;
+om:Space_4382  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2ra" ;
                                     ref:ifcName      "SHAFT_0_1"
                                   ] .
@@ -88,12 +89,12 @@ om:ZoneRef_62684  a      ref:IFCReference ;
         ref:ifcGlobalID  "0_Cl1t7onEZwpCblUnHZTh" ;
         ref:ifcName      "A6:453256" .
 
-om:Space_4035  a                  brick:Space ;
+om:Space_4035  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qP" ;
                                     ref:ifcName      "WC_B4"
                                   ] .
 
-om:Space_5483  a                  brick:Space ;
+om:Space_5483  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oR" ;
                                     ref:ifcName      "SHAFT_1_0"
                                   ] .
@@ -104,8 +105,9 @@ om:Element_21724  a               saref:HVAC , brick:Terminal_Unit ;
                                     ref:ifcName      "Fujitsu General-ASYG18-24KMTA-Back_Left:ASYG18-24KMTA:431955"
                                   ] .
 
-om:Space_598  a                   brick:Space ;
+om:Space_598  a                   brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0041_Controller ;
+        s4bldg:contains           om:RC04N0041_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4f" ;
                                     ref:ifcName      "ROOM_I1"
                                   ] .
@@ -114,19 +116,21 @@ om:ZoneRef_62124  a      ref:IFCReference ;
         ref:ifcGlobalID  "06B2afrsv0uBHvTl5DaaCm" ;
         ref:ifcName      "Default:134083" .
 
-om:Space_4953  a                  brick:Space ;
+om:Space_4953  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0048_Controller ;
+        s4bldg:contains           om:RC04N0048_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oU" ;
                                     ref:ifcName      "ROOM_A2"
                                   ] .
 
-om:Space_2967  a                  brick:Space ;
+om:Space_2967  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qV" ;
                                     ref:ifcName      "Shaft_2_0"
                                   ] .
 
-om:Space_6037  a                  brick:Space ;
+om:Space_6037  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0050_Controller ;
+        s4bldg:contains           om:RC04N0050_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oO" ;
                                     ref:ifcName      "ROOM_A4"
                                   ] .
@@ -139,13 +143,14 @@ om:BuildingStorey_161
                                     ref:ifcName      ""
                                   ] .
 
-om:Space_4201  a                  brick:Space ;
+om:Space_4201  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2rc" ;
                                     ref:ifcName      "CORRIDOR_I"
                                   ] .
 
-om:Space_1498  a                  brick:Space ;
+om:Space_1498  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0045_Controller ;
+        s4bldg:contains           om:RC04N0045_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4c" ;
                                     ref:ifcName      "ROOM_I5"
                                   ] .
@@ -185,8 +190,9 @@ om:Zone_63211  a                  brick:Zone ;
         brick:hasPart             om:Space_960 , om:Space_783 ;
         ref:hasExternalReference  om:ZoneRef_63211 .
 
-om:Space_3692  a                  brick:Space ;
+om:Space_3692  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0055_Controller ;
+        s4bldg:contains           om:RC04N0055_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qR" ;
                                     ref:ifcName      "ROOM_B3"
                                   ] .
@@ -205,7 +211,7 @@ om:Zone_63511  a                  brick:Zone ;
         brick:hasPart             om:Space_1126 , om:Space_347 ;
         ref:hasExternalReference  om:ZoneRef_63511 .
 
-om:Space_1664  a                  brick:Space ;
+om:Space_1664  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4O" ;
                                     ref:ifcName      "WC_I5"
                                   ] .
@@ -254,7 +260,7 @@ om:ZoneRef_62761  a      ref:IFCReference ;
         ref:ifcGlobalID  "0_Cl1t7onEZwpCblUnHZTg" ;
         ref:ifcName      "A1:453257" .
 
-om:Space_5844  a                  brick:Space ;
+om:Space_5844  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oP" ;
                                     ref:ifcName      "WC_A5"
                                   ] .
@@ -273,13 +279,14 @@ om:Zone_63135  a                  brick:Zone ;
         brick:hasPart             om:Space_598 ;
         ref:hasExternalReference  om:ZoneRef_63135 .
 
-om:Space_2786  a                  brick:Space ;
+om:Space_2786  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qG" ;
                                     ref:ifcName      "WC_B6"
                                   ] .
 
-om:Space_7283  a                  brick:Space ;
+om:Space_7283  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0053_Controller ;
+        s4bldg:contains           om:RC04N0053_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pl" ;
                                     ref:ifcName      "ROOM_B1"
                                   ] .
@@ -329,13 +336,14 @@ om:ZoneRef_63286  a      ref:IFCReference ;
         ref:ifcGlobalID  "20ATIiG4rFzOwjysAbYjoD" ;
         ref:ifcName      "I3:453264" .
 
-om:Space_6903  a                  brick:Space ;
+om:Space_6903  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pZ" ;
                                     ref:ifcName      "SHAFT_1_1"
                                   ] .
 
-om:Space_3511  a                  brick:Space ;
+om:Space_3511  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0056_Controller ;
+        s4bldg:contains           om:RC04N0056_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qS" ;
                                     ref:ifcName      "ROOM_B4"
                                   ] .
@@ -360,13 +368,14 @@ om:Zone_62229  a                  brick:Zone ;
         brick:hasPart             om:Space_7094 , om:Space_2786 ;
         ref:hasExternalReference  om:ZoneRef_62229 .
 
-om:Space_2618  a                  brick:Space ;
+om:Space_2618  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qH" ;
                                     ref:ifcName      "WC_B2"
                                   ] .
 
-om:Space_783  a                   brick:Space ;
+om:Space_783  a                   brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0042_Controller ;
+        s4bldg:contains           om:RC04N0042_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4h" ;
                                     ref:ifcName      "ROOM_I2"
                                   ] .
@@ -391,7 +400,7 @@ om:ZoneRef_63060  a      ref:IFCReference ;
         ref:ifcGlobalID  "0_Cl1t7onEZwpCblUnHZTk" ;
         ref:ifcName      "A5:453261" .
 
-om:Space_5300  a                  brick:Space ;
+om:Space_5300  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oS" ;
                                     ref:ifcName      "WC_A6"
                                   ] .
@@ -403,8 +412,9 @@ om:RC04N0041_Controller
                                     ref:ifcName      "HC_Control Unit_F_MEPcontent_Mitsubishi Electric Corporation_PZ-DR_INT-EN:PZ-61DR:433961"
                                   ] .
 
-om:Space_5676  a                  brick:Space ;
+om:Space_5676  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0051_Controller ;
+        s4bldg:contains           om:RC04N0051_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oQ" ;
                                     ref:ifcName      "ROOM_A5"
                                   ] .
@@ -445,8 +455,9 @@ om:Zone_62124  a                  brick:Zone ;
         brick:hasPart             om:Space_7652 , om:Space_4382 , om:Space_5483 , om:Space_6735 , om:Space_7818 , om:Space_2967 , om:Space_6903 , om:Space_1307 , om:Space_4201 ;
         ref:hasExternalReference  om:ZoneRef_62124 .
 
-om:Space_7094  a                  brick:Space ;
+om:Space_7094  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0058_Controller ;
+        s4bldg:contains           om:RC04N0058_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pW" ;
                                     ref:ifcName      "ROOM_B6"
                                   ] .
@@ -463,22 +474,22 @@ om:ZoneRef_62609  a      ref:IFCReference ;
         ref:ifcGlobalID  "0J5GGcHXH0CP8hbTp3jIv5" ;
         ref:ifcName      "B3:453254" .
 
-om:Space_1307  a                  brick:Space ;
+om:Space_1307  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4X" ;
                                     ref:ifcName      "SHAFT_0_0"
                                   ] .
 
-om:Space_6735  a                  brick:Space ;
+om:Space_6735  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pa" ;
                                     ref:ifcName      "CORRIDOR_A"
                                   ] .
 
-om:Space_3869  a                  brick:Space ;
+om:Space_3869  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qQ" ;
                                     ref:ifcName      "WC_B3"
                                   ] .
 
-om:Space_5132  a                  brick:Space ;
+om:Space_5132  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oT" ;
                                     ref:ifcName      "WC_A2"
                                   ] .
@@ -510,48 +521,53 @@ om:BuildingStorey_157
                                     ref:ifcName      ""
                                   ] .
 
-om:Space_7652  a                  brick:Space ;
+om:Space_7652  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pq" ;
                                     ref:ifcName      "CORRIDOR_B"
                                   ] .
 
-om:Space_347  a                   brick:Space ;
+om:Space_347  a                   brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0046_Controller ;
+        s4bldg:contains           om:RC04N0046_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4t" ;
                                     ref:ifcName      "ROOM_I6"
                                   ] .
 
-om:Space_4573  a                  brick:Space ;
+om:Space_4573  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0052_Controller ;
+        s4bldg:contains           om:RC04N0052_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2oG" ;
                                     ref:ifcName      "ROOM_A6"
                                   ] .
 
-om:Space_1857  a                  brick:Space ;
+om:Space_1857  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0044_Controller ;
+        s4bldg:contains           om:RC04N0044_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4S" ;
                                     ref:ifcName      "ROOM_I4"
                                   ] .
 
-om:Space_6567  a                  brick:Space ;
+om:Space_6567  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pb" ;
                                     ref:ifcName      "WC_A4"
                                   ] .
 
-om:Space_2040  a                  brick:Space ;
+om:Space_2040  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0043_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4G" ;
                                     ref:ifcName      "ROOM_I3"
                                   ] .
 
-om:Space_3154  a                  brick:Space ;
+om:Space_3154  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0057_Controller ;
+        s4bldg:contains           om:RC04N0057_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qU" ;
                                     ref:ifcName      "ROOM_B5"
                                   ] .
 
-om:Space_7468  a                  brick:Space ;
+om:Space_7468  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0054_Controller ;
+        s4bldg:contains           om:RC04N0054_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pk" ;
                                     ref:ifcName      "ROOM_B2"
                                   ] .
@@ -573,18 +589,19 @@ om:Zone_62761  a                  brick:Zone ;
         brick:hasPart             om:Space_4766 ;
         ref:hasExternalReference  om:ZoneRef_62761 .
 
-om:Space_960  a                   brick:Space ;
+om:Space_960  a                   brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4j" ;
                                     ref:ifcName      "WC_I2"
                                   ] .
 
-om:Space_1126  a                  brick:Space ;
+om:Space_1126  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "3kT8I8pp95QAZ7pLPg6v4l" ;
                                     ref:ifcName      "WC_I6"
                                   ] .
 
-om:Space_6220  a                  brick:Space ;
+om:Space_6220  a                  brick:Space, s4bldg:BuildingSpace ;
         brick:isLocationOf        om:RC04N0049_Controller ;
+        s4bldg:contains           om:RC04N0049_Controller ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pd" ;
                                     ref:ifcName      "ROOM_A3"
                                   ] .
@@ -597,7 +614,7 @@ om:BuildingStorey_173
                                     ref:ifcName      ""
                                   ] .
 
-om:Space_7818  a                  brick:Space ;
+om:Space_7818  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pp" ;
                                     ref:ifcName      "Shaft_2_1"
                                   ] .
@@ -612,7 +629,7 @@ om:Zone_63286  a                  brick:Zone ;
         brick:hasPart             om:Space_2217 , om:Space_2040 ;
         ref:hasExternalReference  om:ZoneRef_63286 .
 
-om:Space_3320  a                  brick:Space ;
+om:Space_3320  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2qT" ;
                                     ref:ifcName      "WC_B5"
                                   ] .
@@ -621,7 +638,7 @@ om:Zone_63436  a                  brick:Zone ;
         brick:hasPart             om:Space_1664 , om:Space_1498 ;
         ref:hasExternalReference  om:ZoneRef_63436 .
 
-om:Space_6399  a                  brick:Space ;
+om:Space_6399  a                  brick:Space, s4bldg:BuildingSpace ;
         ref:hasExternalReference  [ ref:ifcGlobalID  "04fvfeI2P3MOmu2cRam2pc" ;
                                     ref:ifcName      "WC_A3"
                                   ] .
