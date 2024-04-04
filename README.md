@@ -1,31 +1,55 @@
 # Semantics-driven controls
 
+Welcome to the Semantics-Driven Controls repository! This repository hosts mapping algorithms designed to generate semantic models supporting Semantics-Driven Control Applications. These algorithms assist in creating semantic models by mapping metadata from Building Information Modeling (BIM) and Building Automation System (BAS) sources while adhering to Brick and SAREF concepts. Specifically, the BIM algorithm maps metadata from an IFC model to RDF, while the BAS algorithm maps metadata from a CSV point list to RDF.
+
+## Prerequisites:
+Before getting started with the repository, ensure you meet the following prerequisites:
+
+1. Java Development Kit (JDK):
+
+   The project requires JDK for compilation and execution. 
+
+2. Maven:
+
+   The project uses Maven for managing project dependencies and building the project. If Gradle is preferred instead, the information about dependencies within the pom.xml file need to be adapted accordingly.
+
+3. Familiarity with Apache Jena Framework:
+
+   The mapping algorithms are built on the Apache Jena Framework. Familiarise with the framework by exploring the [Jena tutorials]( https://jena.apache.org/tutorials/index.html). 
+
 ## Getting Started 
 
-To access use this repository, follow these steps:
+To use the mapping algorithms, follow these steps:
 
 1. Clone the repository
    ``` 
    git clone https://github.com/ucl-sbde/semantics-driven_controls.git 
    ```
 
+2. Install/download the dependencies
 
-# Mapping algorithms 
+   All project dependencies required to run the mapping algorithms are declared within the `pom.xml` file.
+   
+   For the BIM-to-RDF mapping, we use a purpose-built BIM library package [(gr.tuc.bim-library)](https://github.com/kyriakos-katsigarakis/openmetrics/packages/875264). Ensure to download all files from the [bim-library directory](/workspaces/semantics-driven_controls/bim-library) and place them in the appropriate directory (e.g.,  `C:\Users\YOURUSER\.m2\repository\gr\tuc\bim-library\0.0.1-SNAPSHOT`) if using Visual Studio Code.
+   
+3. Run the converters (mapping) 
 
-This repository also contains mapping algorithms to generate semantic models using Brick and SAREF concepts by mapping metadata from BIM and BAS sources. There are two mapping algorithms available, one for each metadata source (BIM and BAS). The BIM algorithm maps metadata from an IFC model to RDF, while the BAS algorithm maps metadata from a CSV point list to RDF. Once both models are generated separately, they can be merged based on common instances by uploading both wihtin a triple store (e.g., Fuseki).    
+   To generate the models from the BIM and BAS metadata sources, execute the `ConvertersProxy.java` script. This script will call both converters.
 
-## Getting Started 
 
-To access use the mapping algorithms, install the dependencies
+4. Merge the models
 
-Particulary for the IFCtoRDF converter, install the [gr.tuc.bim-library](https://github.com/kyriakos-katsigarakis/openmetrics/packages/875264) package, which is required to serialise and deserialise the IFC STEP file into objects.
-
-## BIM-to-RDF converter
-
+   Once both models are generated separately, you can merge them using the `MergeTTLModels.java` script.
 
 
 ## BAS-to-RDF converter
 
-The BAS-to-RDF conversion script is based on a simple CSV template following a structure of how some BAS point list can be exported from BAS tools. The template has a header row with columns containing human-readable labels. Each column represents classes and object or entity properties that apply to them. These include "Point name" describing measurement and control points (e.g., "writeable cmd label point onoff" referring to an On/Off command); "Data point identifier" for the external references that provide data reading and writing access to each of the points; and their corresponding "Device identifier" (e.g., serial numbers).
+The template has a header row stating the corresponding classes and entity properties of each column. These include `Device name` which refers to descriptions for classifying devices/equipment, `Device identifier` which adds given identifiers to each device (e.g., serial numbers), 
+`Data point name`  which refers to descriptions for measurement and control points related to the devices (e.g., "Writable temp sp point" referring to a temperature setpoint) and `Data point identifier` which informs the external reference identifier that provides data reading and writing access to each of the points.
 
-The process of mapping BAS data point information into RDF involves multiple steps. First, the tool iterates over the rows of the CSV, creating individual instances for each row (data point). Then, it adds the relevant metadata for each data point based on their respective columns, such as identifying the associated device/equipment. During this process, the algorithm identifies Brick and SAREF concepts corresponding to each data point using the description within the "Point name" column. 
+The process provided by our algorithm for mapping BAS metadata within this CSV template into RDF involves multiple steps. First, the script identifies the unique `Device identifier` and, based on their corresponding `Device name`, associates them with a Brick and SAREF class. Second, for each unique identified device, the script iterates over the rows of the CSV, creating individual instances of their respective data points. Then, the script identifies the Brick and SAREF concepts corresponding to each data point using the description within the `Data point name` column. Finally, for each data point, the script adds their external references based on the `Data point identifier`.
+
+
+## BIM-to-RDF converter
+
+In this BIM-to-RDF process, IFC data are extracted for the retrieval of spatial characteristics (e.g., s4bldg:BuildingSpace and brick:Space) and device information such as their classes and properties. The template mapping algorithm follows the IFC hierarchy, iterating over each instance and using the spatial containment concept (`IfcRelContainedInSpatialStructure`) to identify the contained physical resources in each space. This spatial containment feature makes it possible to extract the relationship between resources, such as thermostats and HVAC terminal units, as contained within space and related to a zone.

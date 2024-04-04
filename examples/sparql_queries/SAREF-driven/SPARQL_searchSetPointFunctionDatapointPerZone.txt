@@ -8,7 +8,7 @@ PREFIX quantitykind: <"http://qudt.org/vocab/quantitykind/>
 
 SELECT  DISTINCT ?ZoneID ?point WHERE {{
 
-    ?Tset a  a saref:Actuator;
+    ?Tset a  saref:Actuator;
     saref:controls ?property  ;
     ref:hasExternalReference/ref:hasTimeseriesId ?point .
 

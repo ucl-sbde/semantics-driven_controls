@@ -5,7 +5,7 @@ PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
 
 SELECT  DISTINCT ?ZoneID ?point WHERE {
 
-    ?temp a brick:Zone_Air_Temperature_Setpoint;
+    ?temp a brick:Temperature_Sensor;
     ref:hasExternalReference/ref:hasTimeseriesId ?point.
 
     ?zone a brick:Zone ; brick:hasPart ?space ;

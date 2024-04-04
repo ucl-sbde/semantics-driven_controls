@@ -5,7 +5,7 @@ PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
 
 SELECT  DISTINCT ?ZoneID ?point WHERE {
 
-    ?TsetMin a brick:Min_Temperature_Setpoint_Limit ;
+    ?TsetMin a brick:Min_Temperature_Setpoint ;
     ref:hasExternalReference/ref:hasTimeseriesId ?point .
 
     ?zone a brick:Zone ; brick:hasPart ?space ;
