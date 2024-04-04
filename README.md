@@ -52,4 +52,6 @@ The process provided by our algorithm for mapping BAS metadata within this CSV t
 
 ## BIM-to-RDF converter
 
+The result of this BAS into RDF mapping leads to a preliminary semantic model covering only classes related to devices and measurement and control points. To supplement this initial model with additional BIM metadata, our work proposes a BIM-to-RDF mapping algorithm. The BIM-to-RDF script builds on top of the existing efforts, extending a previous [work](https://github.com/kyriakos-katsigarakis/openmetrics) by the authors. 
+
 In this BIM-to-RDF process, IFC data are extracted for the retrieval of spatial characteristics (e.g., s4bldg:BuildingSpace and brick:Space) and device information such as their classes and properties. The template mapping algorithm follows the IFC hierarchy, iterating over each instance and using the spatial containment concept (`IfcRelContainedInSpatialStructure`) to identify the contained physical resources in each space. This spatial containment feature makes it possible to extract the relationship between resources, such as thermostats and HVAC terminal units, as contained within space and related to a zone.
