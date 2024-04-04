@@ -2,7 +2,8 @@
 
 Welcome to the Semantics-Driven Controls repository! This repository hosts mapping algorithms designed to generate semantic models supporting Semantics-Driven Control Applications. These algorithms assist in creating semantic models by mapping metadata from Building Information Modeling (BIM) and Building Automation System (BAS) sources while adhering to Brick and SAREF concepts. Specifically, the BIM algorithm maps metadata from an IFC model to RDF, while the BAS algorithm maps metadata from a CSV point list to RDF.
 
-## Prerequisites:
+## Prerequisites
+
 Before getting started with the repository, ensure you meet the following prerequisites:
 
 1. Java Development Kit (JDK):
@@ -17,7 +18,7 @@ Before getting started with the repository, ensure you meet the following prereq
 
    The mapping algorithms are built on the Apache Jena Framework. Familiarise with the framework by exploring the [Jena tutorials]( https://jena.apache.org/tutorials/index.html). 
 
-## Getting Started 
+## Getting started 
 
 To use the mapping algorithms, follow these steps:
 
