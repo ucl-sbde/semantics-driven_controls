@@ -74,4 +74,4 @@ The [examples directory](https://github.com/ucl-sbde/semantics-driven_controls/t
 
 3. Control actors
 
-   The control actors host example scripts for running DF functions, including ators for executing SPARQL queris, reading and writing data and executing logic. 
+   The control actors host example scripts for running DF functions, including ators for executing SPARQL queries, reading and writing data and executing logic. 
