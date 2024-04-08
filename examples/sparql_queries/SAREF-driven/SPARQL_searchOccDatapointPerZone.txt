@@ -4,7 +4,7 @@ PREFIX  om:    <http://openmetrics.eu/openmetrics#>
 PREFIX  saref: <https://saref.etsi.org/core#>  
 PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
 PREFIX  s4bldg: <https://saref.etsi.org/saref4bldg#>
-PREFIX quantitykind: <"http://qudt.org/vocab/quantitykind/>
+PREFIX quantitykind: <http://qudt.org/vocab/quantitykind/>
 
 SELECT  DISTINCT ?ZoneID ?point WHERE {
    

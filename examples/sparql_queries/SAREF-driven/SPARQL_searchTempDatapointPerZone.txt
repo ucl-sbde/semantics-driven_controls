@@ -4,7 +4,7 @@ PREFIX  om:    <http://openmetrics.eu/openmetrics#>
 PREFIX  saref: <https://saref.etsi.org/core#>  
 PREFIX  ref:   <https://brickschema.org/schema/Brick/ref#>
 PREFIX  s4bldg: <https://saref.etsi.org/saref4bldg#>
-PREFIX quantitykind: <"http://qudt.org/vocab/quantitykind/>
+PREFIX quantitykind: <http://qudt.org/vocab/quantitykind/>
 
 SELECT  DISTINCT ?ZoneID ?point WHERE {{
 
@@ -12,7 +12,7 @@ SELECT  DISTINCT ?ZoneID ?point WHERE {{
     saref:observes ?property ;
     ref:hasExternalReference/ref:hasTimeseriesId ?point .
 
-    ?property a  quantitykind:Temperature, saref:Property . 
+    ?property a quantitykind:Temperature, saref:Property . 
  
     ?zone a brick:Zone ; brick:hasPart ?space ;
     ref:hasExternalReference ?zoneRef.
