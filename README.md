@@ -1,6 +1,8 @@
-# Generating semantic models for semantics-driven controls applications
+# Semantics-driven controls applications
 
-This repository hosts mapping algorithms designed to generate semantic models supporting semantics-driven control applications. These algorithms assist in creating semantic models by mapping metadata from Building Information Modeling (BIM) and Building Automation System (BAS) sources while adhering to Brick and SAREF concepts. Specifically, the BIM algorithm maps metadata from an IFC model to RDF, while the BAS algorithm maps metadata from a CSV point list to RDF.
+This repository primarily hosts mapping algorithms designed to generate semantic models supporting semantics-driven control applications, as well as examples for sample files used for generating the models, SPARQL queries used to configure controls and actors scripts to used to host DF controls' functions. 
+
+The mapping algorithms assist in creating semantic models by mapping metadata from Building Information Modeling (BIM) and Building Automation System (BAS) sources while adhering to Brick and SAREF concepts. Specifically, the BIM algorithm maps metadata from an IFC model to RDF, while the BAS algorithm maps metadata from a CSV point list to RDF.
 
 ## Prerequisites
 
@@ -8,11 +10,11 @@ Before getting started with the repository, ensure you meet the following prereq
 
 1. Java Development Kit (JDK):
 
-   The project requires JDK for compilation and execution. 
+   The mapping algorithms requires JDK for compilation and execution. 
 
 2. Maven:
 
-   The project uses Maven for managing project dependencies and building the project. If Gradle is preferred instead, the information about dependencies within the `pom.xml` file need to be adapted accordingly.
+   The mapping algorithms uses Maven for managing project dependencies and building the project. If Gradle is preferred instead, the information about dependencies within the `pom.xml` file need to be adapted accordingly.
 
 3. Familiarity with Apache Jena Framework:
 
@@ -42,7 +44,7 @@ To use the mapping algorithms, follow these steps:
    Once both models are generated separately, you can merge them using the `MergeTTLModels.java` script.
 
 
-## How it works?
+## How do the mapping algorithms work?
 
 1. BAS-to-RDF converter
 
@@ -69,3 +71,7 @@ The [examples directory](https://github.com/ucl-sbde/semantics-driven_controls/t
 2. Brick and SAREF driven SPARQL queries
 
    The SPARQL queries are examples of queries that can support the configuration of control applications using both Brick and SAREF concepts.
+
+3. Control actors
+
+   The control actors host example scripts for running DF functions, including ators for executing SPARQL queris, reading and writing data and executing logic. 
