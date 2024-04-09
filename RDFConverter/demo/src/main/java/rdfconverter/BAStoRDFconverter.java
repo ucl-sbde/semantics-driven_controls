@@ -1022,7 +1022,7 @@ public class BAStoRDFconverter {
 							Resource resSetpointMax = rdfModel.createResource(
 									rdfModel.getNsPrefixURI("om") + device_identifier + "_TempSetpointMax");
 							resSetpointMax.addProperty(RDF.type, ResourceFactory.createResource(
-									rdfModel.getNsPrefixURI("brick") + "Max_Temperature_Setpoint"));
+									rdfModel.getNsPrefixURI("brick") + "Max_Air_Temperature_Setpoint"));
 
 							// create a blank node
 							Resource externalReference = rdfModel.createResource();
@@ -1053,7 +1053,7 @@ public class BAStoRDFconverter {
 							Resource resSetpointMin = rdfModel.createResource(
 									rdfModel.getNsPrefixURI("om") + device_identifier + "_TempSetpointMin");
 							resSetpointMin.addProperty(RDF.type, ResourceFactory.createResource(
-									rdfModel.getNsPrefixURI("brick") + "Min_Temperature_Setpoint"));
+									rdfModel.getNsPrefixURI("brick") + "Min_Air_Temperature_Setpoint"));
 
 							// create a blank node
 							Resource externalReference = rdfModel.createResource();
