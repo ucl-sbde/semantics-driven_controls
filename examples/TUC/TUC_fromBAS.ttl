@@ -30,7 +30,7 @@ om:RC04N0049_Lockout_Command
                           "TUC.245.76.R279" ] .
 
 om:RC04N0056_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0056_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R435" ] .
@@ -61,7 +61,7 @@ om:RC04N0047_TempSensingPoint
         saref:observes            om:TempProperty .
 
 om:RC04N0041_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0041_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R15" ] .
@@ -106,7 +106,7 @@ om:RC04N0048_Lockout_Command
                           "TUC.245.76.R299" ] .
 
 om:RC04N0055_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0055_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R455" ] .
@@ -161,7 +161,7 @@ om:RC04N0047_Lockout_Command
                           "TUC.245.76.R199" ] .
 
 om:RC04N0054_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0054_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R475" ] .
@@ -232,7 +232,7 @@ om:RC04N0046_Lockout_Command
                           "TUC.245.76.R39" ] .
 
 om:RC04N0053_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0053_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R375" ] .
@@ -276,7 +276,7 @@ om:RC04N0050_TempSetpoint
         saref:controls            om:TempProperty .
 
 om:RC04N0049_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0049_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R274" ] .
@@ -288,7 +288,7 @@ om:RC04N0045_Lockout_Command
                           "TUC.245.76.R59" ] .
 
 om:RC04N0052_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0052_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R215" ] .
@@ -339,7 +339,7 @@ om:RC04N0048_TempSensingPoint
         saref:observes            om:TempProperty .
 
 om:RC04N0048_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0048_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R294" ] .
@@ -357,7 +357,7 @@ om:RC04N0049_Mode_Command
                           "TUC.245.76.R267" ] .
 
 om:RC04N0051_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0051_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R235" ] .
@@ -402,7 +402,7 @@ om:RC04N0057_OccSensingPoint
         saref:observes            om:OccProperty .
 
 om:RC04N0047_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0047_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R194" ] .
@@ -420,7 +420,7 @@ om:RC04N0054_Mode_Command
                           "TUC.245.76.R467" ] .
 
 om:RC04N0050_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0050_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R255" ] .
@@ -500,7 +500,7 @@ om:RC04N0041_OnOffCommand
                           "TUC.245.76.R6" ] .
 
 om:RC04N0046_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0046_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R34" ] .
@@ -573,7 +573,7 @@ om:RC04N0055_OccSensingPoint
 om:PowerProperty  rdf:type  quantitykind:Power , saref:Property .
 
 om:RC04N0045_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0045_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R54" ] .
@@ -618,7 +618,7 @@ om:RC04N0047_OnOffCommand
                           "TUC.245.76.R186" ] .
 
 om:RC04N0044_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0044_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R74" ] .
@@ -631,7 +631,7 @@ om:RC04N0049_TempSensingPoint
         saref:observes            om:TempProperty .
 
 om:RC04N0058_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0058_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R394" ] .
@@ -676,7 +676,7 @@ om:RC04N0056_TempSensingPoint
         saref:observes            om:TempProperty .
 
 om:RC04N0043_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0043_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R94" ] .
@@ -707,7 +707,7 @@ om:RC04N0047_TempSetpoint
         saref:controls            om:TempProperty .
 
 om:RC04N0057_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0057_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R414" ] .
@@ -756,7 +756,7 @@ om:RC04N0049_Equipment
         s4ener:serialNumber  "RC04N0049" .
 
 om:RC04N0042_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0042_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R114" ] .
@@ -781,7 +781,7 @@ om:RC04N0049_OnOffCommand
                           "TUC.245.76.R266" ] .
 
 om:RC04N0056_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0056_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R434" ] .
@@ -813,7 +813,7 @@ om:RC04N0051_OccSensingPoint
         saref:observes            om:OccProperty .
 
 om:RC04N0041_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0041_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R14" ] .
@@ -845,7 +845,7 @@ om:RC04N0041_Equipment
         s4ener:serialNumber  "RC04N0041" .
 
 om:RC04N0055_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0055_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R454" ] .
@@ -876,7 +876,7 @@ om:RC04N0050_OccSensingPoint
         saref:observes            om:OccProperty .
 
 om:RC04N0049_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0049_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R275" ] .
@@ -894,7 +894,7 @@ om:RC04N0042_Run_Request_Command
                           "TUC.245.76.R118" ] .
 
 om:RC04N0054_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0054_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R474" ] .
@@ -931,7 +931,7 @@ om:RC04N0053_OnOffCommand
                           "TUC.245.76.R366" ] .
 
 om:RC04N0048_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0048_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R295" ] .
@@ -981,7 +981,7 @@ om:RC04N0057_TempSensingPoint
         saref:observes            om:TempProperty .
 
 om:RC04N0053_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0053_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R374" ] .
@@ -993,7 +993,7 @@ om:RC04N0045_Delay_Parameter
                           "TUC.245.76.R57" ] .
 
 om:RC04N0047_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0047_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R195" ] .
@@ -1014,7 +1014,7 @@ om:RC04N0053_TempSetpoint
 om:OccProperty  rdf:type  quantitykind:Occupancy , saref:Property .
 
 om:RC04N0052_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0052_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R214" ] .
@@ -1039,7 +1039,7 @@ om:RC04N0043_TempSetpoint
         saref:controls            om:TempProperty .
 
 om:RC04N0046_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0046_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R35" ] .
@@ -1064,7 +1064,7 @@ om:RC04N0058_Delay_Parameter
                           "TUC.245.76.R397" ] .
 
 om:RC04N0051_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0051_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R234" ] .
@@ -1089,7 +1089,7 @@ om:RC04N0048_Run_Request_Command
                           "TUC.245.76.R298" ] .
 
 om:RC04N0045_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0045_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R55" ] .
@@ -1113,7 +1113,7 @@ om:RC04N0054_OnOffCommand
                           "TUC.245.76.R466" ] .
 
 om:RC04N0050_TempSetpointMin
-        rdf:type                  brick:Min_Temperature_Setpoint;
+        rdf:type                  brick:Min_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0050_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R254" ] .
@@ -1131,7 +1131,7 @@ om:RC04N0053_Equipment
         s4ener:serialNumber  "RC04N0053" .
 
 om:RC04N0044_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0044_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R75" ] .
@@ -1177,7 +1177,7 @@ om:RC04N0042_TempSensingPoint
         saref:observes            om:TempProperty .
 
 om:RC04N0058_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0058_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R395" ] .
@@ -1195,7 +1195,7 @@ om:RC04N0042_Equipment
         s4ener:serialNumber  "RC04N0042" .
 
 om:RC04N0043_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0043_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R95" ] .
@@ -1239,7 +1239,7 @@ om:RC04N0058_Run_Request_Command
                           "TUC.245.76.R398" ] .
 
 om:RC04N0057_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0057_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R415" ] .
@@ -1265,7 +1265,7 @@ om:RC04N0044_TempSetpoint
         saref:controls            om:TempProperty .
 
 om:RC04N0042_TempSetpointMax
-        rdf:type                  brick:Max_Temperature_Setpoint;
+        rdf:type                  brick:Max_Air_Temperature_Setpoint;
         brick:isPointOf           om:RC04N0042_Equipment;
         ref:hasExternalReference  [ ref:hasTimeseriesId
                           "TUC.245.76.R115" ] .
