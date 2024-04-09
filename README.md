@@ -1,6 +1,6 @@
 # Semantics-driven controls applications
 
-This repository contains data and code to support our paper, under review, entitled "A semantics-driven framework to enable demand flexibility control applications in real buildings". 
+This repository contains the data and code to support our paper, under review, entitled "A semantics-driven framework to enable demand flexibility control applications in real buildings". 
 
 The repository primarily hosts mapping algorithms (RDFConverter) designed to generate semantic models to enable the self-configuration of DF control applications. The mapping algorithms assist in creating semantic models by mapping metadata from Building Information Modeling (BIM) and Building Automation System (BAS) sources while adhering to Brick and SAREF concepts. Specifically, the BIM algorithm maps metadata from an IFC model to RDF, while the BAS algorithm maps metadata from a CSV point list to RDF.
 
